@@ -13,8 +13,9 @@ Contents:
 
    intro.rst
    architecture.rst
+   howmegamworks.rst
    install.rst
-   privatecloud.rst
+   configure.rst
    quickstart.rst
    cloudsetup.rst
    crosscloud.rst

@@ -40,8 +40,8 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'Megam Cloud'
-copyright = u'2013, kishore(nkishore@megam.co.in), thomas(alrin@megam.co.in), raj(rajthilak@megam.co.in)'
+project = u'Megam '
+copyright = u'2014, Megam systems'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -213,7 +213,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'megamcloud', u'Megam Cloud Documentation',
+    ('index', 'megamcloud', u'Megam Documentation',
      [u'kishore(nkishore@megam.co.in), thomas(alrin@megam.co.in), raj(rajthilak@megam.co.in)'], 1)
 ]
 
