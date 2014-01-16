@@ -1,111 +1,121 @@
 #####################
-Cross Cloud
+Cloud
 #####################
 
-To test the templates installation::
+This option allows you setup multi cloud definitions.::
 
-   1. change to home directory
-          * $ cd 
-   2. build a template pyre application
-          * $ app.py
-          * creating application 'Simple' in 'simple.py'
+   1. Helpful when you run your apps/services with different memory/cpu and storage. 
 
-Now that the build system is installed, let's install pyre. 
+   2. Helpful when you want to quickly launch the same app/service in a different cloud.
+
+We have provided you with one cloud default to play with.  
+
+.. hint:: The supported clouds are:
+
+
+
++------------------------+----------------------------------------------------------------------+
+| Cloud                  | Description                                                          |
+|                        |                                                                      |
++========================+======================================================================+
+| hp (openstack)         | `hpcloud.com <https://console.hpcloud.com>`_.                        |
+|                        | supported, tested with ubuntu images                                 |
++------------------------+----------------------------------------------------------------------+
+| AWS                    | `AWS EC2 <https://console.aws.amazon.com/console/homem>`_.           |
+|                        | supported, tested with ubuntu images                                 |
++------------------------+----------------------------------------------------------------------+
+| Google cloud           | `google cloud <https://cloud.google.com/>`_.                         |
+|                        | supported, tested with debian images                                 |
++------------------------+----------------------------------------------------------------------+
+| Artisan                | `artisaninfrastructure.com <http://www.artisaninfrastructure.com>`_. |
+|                        | work in progress                                                     |
++------------------------+----------------------------------------------------------------------+
+| Podnix Cloud           | `podnix.com <https://www.podnix.com>`_.                              |
+|                        | work in progress                                                     |
++------------------------+----------------------------------------------------------------------+
+| Profit bricks          | `profitbricks.com <https://www.profitbricks.com>`_.                  |
+|                        | work in progress                                                     |
++------------------------+----------------------------------------------------------------------+
+
+HP
+============================
+
+If you have your own account with hp, you can use the same with megam. 
+
+1. Have the configuration handy as per this link `hp <https://community.hpcloud.com/article/getting-started-compute-135>`_.
+
+2. Click ``Settings`` and choose ``hp`` icon. 
+   
+.. image:: _static/images/hpcloud.png 
+          
+3. Click Save
+   
+4. You can see your saved settings in under ``Manage Settings`` >  ``Clouds``   
+ 
+
+
+Podnix Cloud
+============================
+
+.. hint:: Under testing. Work in progress.
+
+Profit Bricks
+============================
+
+.. hint:: Under testing. Work in progress.
+
+
+Artisan
+============================
+
+.. hint:: Work in progress.
 
 
 AWS
 ============================
 
-Once the above environment variables have been set, download and build config/ and the templates/ with the following steps::
 
-   1. create development directory
-          * $ mkdir -p $DV_DIR 
-   2. create tools directory
-          * $ mkdir -p $TOOLS_DIR 
-   3. create builds directory
-          * $ mkdir -p $BLD_ROOT 
-   4. change to development directory
-          * $ cd $DV_DIR 
-   5. use anonymous cvs to get config and the templates
-          * $ cvs -d :pserver:config@cvs.cacr.caltech.edu:/config login
-            [password: config]
-          * $ cvs -d :pserver:config@cvs.cacr.caltech.edu:/config co config
-          * $ cvs -d :pserver:pyre@cvs.cacr.caltech.edu:/pyre login
-            [password: pyre]
-          * $ cvs -d :pserver:pyre@cvs.cacr.caltech.edu:/pyre co templates 
-   6. change to templates directory
-          * $ cd $TEMPLATES_DIR 
-   7. build templates
-          * $ mm 
+If you have your own account with AWS, you can use the same with megam. 
 
-$DV_DIR should now have the following structure::
+1. Have the configuration handy as per this link `AWS EC2 <http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-instance_linux.html>`_.
 
-  builds/  config/  templates/  tools/
+2. Click ``Settings`` and choose ``AWS`` icon. 
+   
+.. image:: _static/images/aws.png 
+ 
+3. Click Save
+   
+4. You can see your saved settings in under ``Manage Settings`` >  ``Clouds``   
+ 
 
-For support refer (point to support link)  
 
 GCE
 ============================
 
-Once the above environment variables have been set, download and build config/ and the templates/ with the following steps::
+If you have your own account with AWS, you can use the same with megam. 
 
-   1. create development directory
-          * $ mkdir -p $DV_DIR 
-   2. create tools directory
-          * $ mkdir -p $TOOLS_DIR 
-   3. create builds directory
-          * $ mkdir -p $BLD_ROOT 
-   4. change to development directory
-          * $ cd $DV_DIR 
-   5. use anonymous cvs to get config and the templates
-          * $ cvs -d :pserver:config@cvs.cacr.caltech.edu:/config login
-            [password: config]
-          * $ cvs -d :pserver:config@cvs.cacr.caltech.edu:/config co config
-          * $ cvs -d :pserver:pyre@cvs.cacr.caltech.edu:/pyre login
-            [password: pyre]
-          * $ cvs -d :pserver:pyre@cvs.cacr.caltech.edu:/pyre co templates 
-   6. change to templates directory
-          * $ cd $TEMPLATES_DIR 
-   7. build templates
-          * $ mm 
+1. Have the configuration handy as per this link `GCE <https://developers.google.com/compute/docs/instances#start_vm>`_.
 
-$DV_DIR should now have the following structure::
+2. Click ``Settings`` and choose ``GCE`` icon. 
+   
+.. image:: _static/images/gce.png 
+         
+3. Click Save
 
-  builds/  config/  templates/  tools/
-
-For support refer (point to support link)  
-
-HP
+4. You can see your saved settings in under ``Manage Settings`` >  ``Clouds``   
+ 
+Manage
 ============================
 
-Once the above environment variables have been set, download and build config/ and the templates/ with the following steps::
+Once the cloud setting was saved, to manage them.   Click ``Settings`` from Dashboard.
 
-   1. create development directory
-          * $ mkdir -p $DV_DIR 
-   2. create tools directory
-          * $ mkdir -p $TOOLS_DIR 
-   3. create builds directory
-          * $ mkdir -p $BLD_ROOT 
-   4. change to development directory
-          * $ cd $DV_DIR 
-   5. use anonymous cvs to get config and the templates
-          * $ cvs -d :pserver:config@cvs.cacr.caltech.edu:/config login
-            [password: config]
-          * $ cvs -d :pserver:config@cvs.cacr.caltech.edu:/config co config
-          * $ cvs -d :pserver:pyre@cvs.cacr.caltech.edu:/pyre login
-            [password: pyre]
-          * $ cvs -d :pserver:pyre@cvs.cacr.caltech.edu:/pyre co templates 
-   6. change to templates directory
-          * $ cd $TEMPLATES_DIR 
-   7. build templates
-          * $ mm 
+.. image:: _static/images/manageclouds.png
+ 		
+ 		   
+**View**  		
+ 		
+Click ``Clouds`` on the tab view
+             
+Select and View the cloud          
 
-$DV_DIR should now have the following structure::
-
-  builds/  config/  templates/  tools/
-
-For support refer (point to support link)  
-
-
-
-
+.. image:: _static/images/viewcloud.png

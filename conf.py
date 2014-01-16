@@ -141,7 +141,7 @@ html_static_path = ['_static']
 #html_domain_indices = True
 
 # If false, no index is generated.
-#html_use_index = True
+html_use_index = True
 
 # If true, the index is split into individual pages for each letter.
 #html_split_index = False
@@ -164,7 +164,7 @@ html_static_path = ['_static']
 #html_file_suffix = None
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'MegamClouddoc'
+htmlhelp_basename = 'megam users guide'
 
 
 # -- Options for LaTeX output --------------------------------------------------
@@ -183,7 +183,7 @@ latex_elements = {
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-  ('index', 'MegamCloud.tex', u'Megam Cloud Documentation',
+  ('index', 'mmegamug.tex', u'Megam Documentation',
    u'kishore(nkishore@megam.co.in), thomas(alrin@megam.co.in), raj(rajthilak@megam.co.in)', 'manual'),
 ]
 
@@ -245,10 +245,10 @@ texinfo_documents = [
 # -- Options for Epub output ---------------------------------------------------
 
 # Bibliographic Dublin Core info.
-epub_title = u'Megam Cloud'
+epub_title = u'Megam'
 epub_author = u'kishore(nkishore@megam.co.in), thomas(alrin@megam.co.in), raj(rajthilak@megam.co.in)'
 epub_publisher = u'kishore(nkishore@megam.co.in), thomas(alrin@megam.co.in), raj(rajthilak@megam.co.in)'
-epub_copyright = u'2013, kishore(nkishore@megam.co.in), thomas(alrin@megam.co.in), raj(rajthilak@megam.co.in)'
+epub_copyright = u'2014, Megam systems'
 
 # The language of the text. It defaults to the language option
 # or en if the language is not set.

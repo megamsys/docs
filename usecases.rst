@@ -2,108 +2,33 @@
 Typical Usecases
 #####################
 
-To test the templates installation::
 
-   1. change to home directory
-          * $ cd 
-   2. build a template pyre application
-          * $ app.py
-          * creating application 'Simple' in 'simple.py'
+Private Data center Scenario
+================================
 
-Now that the build system is installed, let's install pyre. 
+You current private data center can provide more value to your customers by providing megam.  
 
+
+Enterprise Infrastructure Scenario
+===================================
+
+You current private infrastructure can be beefup with megam. The system administrations can use the 
+chef repository and tweak the recipies to their choice.  
 
 Developer Scenario
 ============================
 
-Once the above environment variables have been set, download and build config/ and the templates/ with the following steps::
+You can setup megam on premise and have your development team work with a near to production environment
 
-   1. create development directory
-          * $ mkdir -p $DV_DIR 
-   2. create tools directory
-          * $ mkdir -p $TOOLS_DIR 
-   3. create builds directory
-          * $ mkdir -p $BLD_ROOT 
-   4. change to development directory
-          * $ cd $DV_DIR 
-   5. use anonymous cvs to get config and the templates
-          * $ cvs -d :pserver:config@cvs.cacr.caltech.edu:/config login
-            [password: config]
-          * $ cvs -d :pserver:config@cvs.cacr.caltech.edu:/config co config
-          * $ cvs -d :pserver:pyre@cvs.cacr.caltech.edu:/pyre login
-            [password: pyre]
-          * $ cvs -d :pserver:pyre@cvs.cacr.caltech.edu:/pyre co templates 
-   6. change to templates directory
-          * $ cd $TEMPLATES_DIR 
-   7. build templates
-          * $ mm 
-
-$DV_DIR should now have the following structure::
-
-  builds/  config/  templates/  tools/
-
-For support refer (point to support link)  
-
-Team Scenario
-============================
-
-Once the above environment variables have been set, download and build config/ and the templates/ with the following steps::
-
-   1. create development directory
-          * $ mkdir -p $DV_DIR 
-   2. create tools directory
-          * $ mkdir -p $TOOLS_DIR 
-   3. create builds directory
-          * $ mkdir -p $BLD_ROOT 
-   4. change to development directory
-          * $ cd $DV_DIR 
-   5. use anonymous cvs to get config and the templates
-          * $ cvs -d :pserver:config@cvs.cacr.caltech.edu:/config login
-            [password: config]
-          * $ cvs -d :pserver:config@cvs.cacr.caltech.edu:/config co config
-          * $ cvs -d :pserver:pyre@cvs.cacr.caltech.edu:/pyre login
-            [password: pyre]
-          * $ cvs -d :pserver:pyre@cvs.cacr.caltech.edu:/pyre co templates 
-   6. change to templates directory
-          * $ cd $TEMPLATES_DIR 
-   7. build templates
-          * $ mm 
-
-$DV_DIR should now have the following structure::
-
-  builds/  config/  templates/  tools/
-
-For support refer (point to support link)  
 
 Cloud Bursting
 ============================
 
-Once the above environment variables have been set, download and build config/ and the templates/ with the following steps::
+You can install megam on your private infra, and use it for cloud bursting which mean when you need more demand, set up to
+automatically start instances in public or any other private cloud. 
 
-   1. create development directory
-          * $ mkdir -p $DV_DIR 
-   2. create tools directory
-          * $ mkdir -p $TOOLS_DIR 
-   3. create builds directory
-          * $ mkdir -p $BLD_ROOT 
-   4. change to development directory
-          * $ cd $DV_DIR 
-   5. use anonymous cvs to get config and the templates
-          * $ cvs -d :pserver:config@cvs.cacr.caltech.edu:/config login
-            [password: config]
-          * $ cvs -d :pserver:config@cvs.cacr.caltech.edu:/config co config
-          * $ cvs -d :pserver:pyre@cvs.cacr.caltech.edu:/pyre login
-            [password: pyre]
-          * $ cvs -d :pserver:pyre@cvs.cacr.caltech.edu:/pyre co templates 
-   6. change to templates directory
-          * $ cd $TEMPLATES_DIR 
-   7. build templates
-          * $ mm 
+Training centers
+============================
 
-$DV_DIR should now have the following structure::
-
-  builds/  config/  templates/  tools/
-
-For support refer (point to support link)  
-
+Repetitions can be reduced by standing and scrapping you test environment in minutes.
 

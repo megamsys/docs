@@ -21,13 +21,13 @@ The description of the various components as seen in the logical architecture.
    | Name in (pic)          | Description                                                                                                |
    |                        |                                                                                                            |
    +========================+============================================================================================================+
-   | 1.Rails & PostgreSQL   | This is a user interface for megam. A portal built using `Ruby on Rails <http://rubyonrails.org/>`_.       | 
+   | 1.Rails & PostgreSQL   | This is an user interface for megam. A portal built using `Ruby on Rails <http://rubyonrails.org/>`_.      | 
    |                        | which is the browser based client for Megam.                                                               |
    |                        | Project source code:`github.com/indykish/nilavu.git <https://github.com/indykish/nilavu.git>`_.            |            
    |                        | This currently runs at `www.megam.co <https://www.megam.co>`_.                                             |
    +------------------------+------------------------------------------------------------------------------------------------------------+
-   | 2.Gateway & RiaK)      | Gateway is a `Playframework(scala) <http://wwww.playframework.com/>`_  based RESTful API server.           |
-   |                        | We have limited API support during the beta. which is the browser based client for Megam.                  |
+   | 2.Gateway & RiaK)      | Gateway is a `Playframework(scala) <http://playframework.com/>`_  based RESTful API server.                |
+   |                        | We have limited API support during the beta.                                                               |
    |                        | Project source code:`github.com/indykish/megam_play.git <https://github.com/indykish/megam_play.git>`_.    |            
    |                        | API docs: `api.megam.co <https://api.megam.co>`_.                                                          |                                                  
    |                        | Riak is a NOSQL datastore used by the Gateway.                                                             |      
@@ -42,17 +42,17 @@ The description of the various components as seen in the logical architecture.
    |                        | RabbitMQ is an AMQP based  messaging system which serves as a hub for all the interconnecting systems      |
    +------------------------+------------------------------------------------------------------------------------------------------------+
    | 5.Chef                 | Chef to create a code-based model for your infrastructure.                                                 |
-   |                        | Currently we support both Enterprices Chef (managed by opscode), and opensource Chef                       |   
+   |                        | Currently we support both Enterprice Chef (managed by opscode), and opensource Chef                        |   
    |                        | Project source code:`github.com/indykish/chef-repo.git <https://github.com/indykish/chef-repo.git>`_.      |            
    |                        | Project source code contains the currently curated cookbooks.                                              | 
    +------------------------+------------------------------------------------------------------------------------------------------------+
-   | 6.Redis & Node.js      | Redis is an open source, BSD licensed, advanced key-value store. This is where all the logs are streamed   |
-   |                        | Node.js is a javascript server runtime, used to serve the browser on any real time log.                    |
-   |                        | This acts like command `tail -100 cloud.log`                                                               |
+   | 6.Redis & Node.js      | Redis is an open source, BSD licensed, advanced key-value store. This is where all the logs are streamed.  |
+   |                        | Node.js is a javascript server runtime, used to serve the browser on any real time log requests.           |
+   |                        | This acts like command `tail -100 *.log` for the cloud                                                     |
    |                        | Project source code:`github.com/indykish/tap.git <https://github.com/indykish/tap.git>`_.                  |            
    +------------------------+------------------------------------------------------------------------------------------------------------+
    | 7.Kibana               | Offline logs, log analytic engine (elastic-server) helps to view/archive analyze logs                      |
-   |                        | which is the browser based client for Megam.                                                               |
+   |                        | and can be viewed from the browser.                                                                        |
    |                        | Project source code:`kibana <http://www.elasticsearch.org/overview/kibana/>`_.                             |            
    |                        | `www.megam.co <https://www.megam.co>`_.                                                                    |
    +------------------------+------------------------------------------------------------------------------------------------------------+
@@ -67,7 +67,7 @@ The description of the various components as seen in the logical architecture.
 
 **Deployment**
 
-Then full stack of software as
+Then full stack of software can be deployed as
 
 .. image:: _static/images/deployment.png
 

@@ -32,7 +32,6 @@ Try out online: `https://www.megam.co <http://www.megam.co>`_ We provide more fe
 
 
 
-
 System Requirements
 ^^^^^^^^^^^^^^^^^^^
 
@@ -89,84 +88,3 @@ On a Debian-based Linux distribution, it’s as easy as:
 
 		$ gem install meggy
 
-Server
-------
-
-.. warning:: All in one install. Ideal for development environments. 
-
-    $ curl -L https://s3-ap-southeast-1.amazonaws.com/megampub/0.1/mc.sh all | sudo bash    
-
-
-
-Ubuntu
-^^^^^^
-
-.. hint:: You can install the individual components in the deployment model as in the architecture. Ideal for production use.
-
-
-.. Installation of Gateway
-.. ==========================
-..
-.. First of all we need to install the Gateway. To do so please add the
-.. following line in your ``/etc/apt/sources.list`` file:
-..
-.. .. code-block:: console
-..
-..   deb http://ppa:launchpad.net/megamsys/0.1 saucy/
-..
-.. Then run:
-..
-.. .. code-block:: console
-..
-..  # curl https://launchpad.net/megamsys/launchpad.net-megamsys.pub | apt-key add -
-..   # apt-get update
-..   # apt-get install megamplay   
-   
-  
-**Enterprise Chef: Register for an account**
-  
-    
-    
-    `http://www.getchef.com/enterprise-chef/ <http://www.getchef.com/enterprise-chef/>`_
-    
-    
-(or) 
-
-    
-**Opensource Chef:**
-
-    .. code-block:: console
-
-        $ wget  https://s3-ap-southeast-1.amazonaws.com/megampub/0.1/mc.sh
-        $ sudo ./mc.sh chef
-        
-        
-**Gateway + Riak group:**
-
-    .. code-block:: console
-
-        $ wget  https://s3-ap-southeast-1.amazonaws.com/megampub/0.1/mc.sh
-        $ sudo ./mc.sh play
-        $ sudo ./mc.sh riak
-          
-**Herk  + RabbitMQ group:**
-
-    .. code-block:: console
-
-        Install RabbitMQ `http://www.rabbitmq.com/install-debian.html` http://www.rabbitmq.com/install-debian.html
-        
-        $ sudo ./mc.sh herk
-        
-        
-**UID:**
-
-    .. code-block:: console
-
-        $ sudo ./mc.sh zookeeper
-        $ sudo ./mc.sh snowflake
-        
-        
-High Availablity(HA)
---------------------
-
-.. hint:: Contact us, we have automated chef cook books which sets up a HA installation for you. 

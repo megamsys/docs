@@ -1,18 +1,96 @@
 ###########################
-Configure
+Private Datacenter
 ###########################
 
 .. _quick-install-guide:
 
+.. warning:: This is a work in progress section.  
 
 
-Megam configuration
-====================================
+Server
+------
+
+
+
+Ubuntu
+^^^^^^
+
+.. hint:: You can install the individual components in the deployment model as in the architecture. Ideal for production use.
+
+
+.. Installation of Gateway
+.. ==========================
+..
+.. First of all we need to install the Gateway. To do so please add the
+.. following line in your ``/etc/apt/sources.list`` file:
+..
+.. .. code-block:: console
+..
+..   deb http://ppa:launchpad.net/megamsys/0.1 saucy/
+..
+.. Then run:
+..
+.. .. code-block:: console
+..
+..  # curl https://launchpad.net/megamsys/launchpad.net-megamsys.pub | apt-key add -
+..   # apt-get update
+..   # apt-get install megamplay   
+   
+  
+**Enterprise Chef: Register for an account**
+  
+    
+    
+    `http://www.getchef.com/enterprise-chef/ <http://www.getchef.com/enterprise-chef/>`_
+    
+    
+(or) 
+
+    
+**Opensource Chef:**
+
+    .. code-block:: console
+
+        $ wget  https://s3-ap-southeast-1.amazonaws.com/megampub/0.1/mc.sh
+        $ sudo ./mc.sh chef
+        
+        
+**Gateway + Riak group:**
+
+    .. code-block:: console
+
+        $ wget  https://s3-ap-southeast-1.amazonaws.com/megampub/0.1/mc.sh
+        $ sudo ./mc.sh play
+        $ sudo ./mc.sh riak
+          
+**Herk  + RabbitMQ group:**
+
+    .. code-block:: console
+
+        Install RabbitMQ `http://www.rabbitmq.com/install-debian.html` http://www.rabbitmq.com/install-debian.html
+        
+        $ sudo ./mc.sh herk
+        
+        
+**UID:**
+
+    .. code-block:: console
+
+        $ sudo ./mc.sh zookeeper
+        $ sudo ./mc.sh snowflake
+        
+        
+High Availablity(HA)
+--------------------
+
+.. hint:: Contact us, we have automated chef cook books which sets up a HA installation for you. 
+
+
 
 Configuration
 -------------
 
-Now that you have `megam installed` successfully installed on your system, you can
+Now that you have `megam server installed` successfully installed on your system, you can
 continue with configuring  Megam. 
 
 Configuration files for the core components described in the architecture can be found 
@@ -20,8 +98,8 @@ in their deploy directories.
 
 If for some reason you encounter any problems check on these.
 
-Gateway
--------
+**Gateway**
+
 
 ``/usr/share/megam/play/application-production.conf`` : 
 
@@ -46,8 +124,7 @@ Gateway
 	$ sudo stop play
 	$ sudo start play
 
-Riak
-----
+**Riak**
 
 ``/etc/riak/riak.config`` : 
 
@@ -67,21 +144,22 @@ Riak
 	
 
 Quick Init
-==========
+----------
 
-Gateway
--------
+**Gateway**
 
-.. warning:: If you installed megam for your private datacenter. This is strictly a onetime, administrator step. 
+.. warning:: If you installed megam for your private datacenter. This is strictly a one-time, administrator step. 
 
-Then open a browser and point to:
+Open a browser and point to:
 
 `http://myapi.megam.co:9000/` 
 
-What happens during this process
---------------------------------
+Click `Quick Init`
 
-The quick init does 3 steps
+
+**What happens during this process**
+
+The quick Init does 3 steps
 
 
 Once you see the Login screen, go ahead and login using:
@@ -93,7 +171,9 @@ Once you see the Login screen, go ahead and login using:
 
 
 Using the installation
-======================
+----------------------
+
+If you have our Rails portal installed locally,  
 
 Then open a browser and point to:
 

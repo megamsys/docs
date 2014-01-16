@@ -2,178 +2,52 @@
 Apps
 #####################
 
-To test the templates installation::
+Developing apps is easy with megam.::
 
-   1. change to home directory
-          * $ cd 
-   2. build a template pyre application
-          * $ app.py
-          * creating application 'Simple' in 'simple.py'
+   1. change code
+     
+   2. publish code to source code repository. {we support Github, Bitbucket under testing)
 
-Now that the build system is installed, let's install pyre. 
+Now that your code is published, let us launch it in the cloud of your choice. 
 
+This is a follow on to the ``quick launch``
 
-Java
+How do i launch in cloud ?
 ============================
 
-Once the above environment variables have been set, download and build config/ and the templates/ with the following steps::
+   1. Click ``My Apps`` from Dashboard.
 
-   1. create development directory
-          * $ mkdir -p $DV_DIR 
-   2. create tools directory
-          * $ mkdir -p $TOOLS_DIR 
-   3. create builds directory
-          * $ mkdir -p $BLD_ROOT 
-   4. change to development directory
-          * $ cd $DV_DIR 
-   5. use anonymous cvs to get config and the templates
-          * $ cvs -d :pserver:config@cvs.cacr.caltech.edu:/config login
-            [password: config]
-          * $ cvs -d :pserver:config@cvs.cacr.caltech.edu:/config co config
-          * $ cvs -d :pserver:pyre@cvs.cacr.caltech.edu:/pyre login
-            [password: pyre]
-          * $ cvs -d :pserver:pyre@cvs.cacr.caltech.edu:/pyre co templates 
-   6. change to templates directory
-          * $ cd $TEMPLATES_DIR 
-   7. build templates
-          * $ mm 
+   * Choose "Java" logo to lauch Java app        
+ 		
+   2. Provide the Git URL. 
+   
+   .. hint:: (or) If you wish to connect your github-repo.    
+          
+   .. image:: _static/images/appstep1_gitrepo.png
+          
+   3. Authorize the Github repository access.     
+          
+   .. image:: _static/images/appstep1_gitoauth.png
+          
+   4. Click Next 
+   
+          
+   5. Launch the app. 
 
-$DV_DIR should now have the following structure::
+ 
 
-  builds/  config/  templates/  tools/
-
-For support refer (point to support link)  
-
-Ruby on Rails
+Manage
 ============================
 
-Once the above environment variables have been set, download and build config/ and the templates/ with the following steps::
+Once the app is launched, to manage them.   Click ``My Apps`` from Dashboard.
 
-   1. create development directory
-          * $ mkdir -p $DV_DIR 
-   2. create tools directory
-          * $ mkdir -p $TOOLS_DIR 
-   3. create builds directory
-          * $ mkdir -p $BLD_ROOT 
-   4. change to development directory
-          * $ cd $DV_DIR 
-   5. use anonymous cvs to get config and the templates
-          * $ cvs -d :pserver:config@cvs.cacr.caltech.edu:/config login
-            [password: config]
-          * $ cvs -d :pserver:config@cvs.cacr.caltech.edu:/config co config
-          * $ cvs -d :pserver:pyre@cvs.cacr.caltech.edu:/pyre login
-            [password: pyre]
-          * $ cvs -d :pserver:pyre@cvs.cacr.caltech.edu:/pyre co templates 
-   6. change to templates directory
-          * $ cd $TEMPLATES_DIR 
-   7. build templates
-          * $ mm 
+  .. image:: _static/images/myappsusage.png
+ 		
+ 		   
+**Delete**  		
+ 		
+ Click ``your app name`` under ``My Apps``
+             
+ Click Delete         
+  
 
-$DV_DIR should now have the following structure::
-
-  builds/  config/  templates/  tools/
-
-For support refer (point to support link)  
-
-Playframework(Scala)
-============================
-
-Once the above environment variables have been set, download and build config/ and the templates/ with the following steps::
-
-   1. create development directory
-          * $ mkdir -p $DV_DIR 
-   2. create tools directory
-          * $ mkdir -p $TOOLS_DIR 
-   3. create builds directory
-          * $ mkdir -p $BLD_ROOT 
-   4. change to development directory
-          * $ cd $DV_DIR 
-   5. use anonymous cvs to get config and the templates
-          * $ cvs -d :pserver:config@cvs.cacr.caltech.edu:/config login
-            [password: config]
-          * $ cvs -d :pserver:config@cvs.cacr.caltech.edu:/config co config
-          * $ cvs -d :pserver:pyre@cvs.cacr.caltech.edu:/pyre login
-            [password: pyre]
-          * $ cvs -d :pserver:pyre@cvs.cacr.caltech.edu:/pyre co templates 
-   6. change to templates directory
-          * $ cd $TEMPLATES_DIR 
-   7. build templates
-          * $ mm 
-
-$DV_DIR should now have the following structure::
-
-  builds/  config/  templates/  tools/
-
-For support refer (point to support link)  
-
-
-
-Akka(Scala)
-============================
-
-Once the above environment variables have been set, download and build config/ and the templates/ with the following steps::
-
-   1. create development directory
-          * $ mkdir -p $DV_DIR 
-   2. create tools directory
-          * $ mkdir -p $TOOLS_DIR 
-   3. create builds directory
-          * $ mkdir -p $BLD_ROOT 
-   4. change to development directory
-          * $ cd $DV_DIR 
-   5. use anonymous cvs to get config and the templates
-          * $ cvs -d :pserver:config@cvs.cacr.caltech.edu:/config login
-            [password: config]
-          * $ cvs -d :pserver:config@cvs.cacr.caltech.edu:/config co config
-          * $ cvs -d :pserver:pyre@cvs.cacr.caltech.edu:/pyre login
-            [password: pyre]
-          * $ cvs -d :pserver:pyre@cvs.cacr.caltech.edu:/pyre co templates 
-   6. change to templates directory
-          * $ cd $TEMPLATES_DIR 
-   7. build templates
-          * $ mm 
-
-$DV_DIR should now have the following structure::
-
-  builds/  config/  templates/  tools/
-
-For support refer (point to support link) 
-
-
-Node.js
-============================
-
-Once the above environment variables have been set, download and build config/ and the templates/ with the following steps::
-
-   1. create development directory
-          * $ mkdir -p $DV_DIR 
-   2. create tools directory
-          * $ mkdir -p $TOOLS_DIR 
-   3. create builds directory
-          * $ mkdir -p $BLD_ROOT 
-   4. change to development directory
-          * $ cd $DV_DIR 
-   5. use anonymous cvs to get config and the templates
-          * $ cvs -d :pserver:config@cvs.cacr.caltech.edu:/config login
-            [password: config]
-          * $ cvs -d :pserver:config@cvs.cacr.caltech.edu:/config co config
-          * $ cvs -d :pserver:pyre@cvs.cacr.caltech.edu:/pyre login
-            [password: pyre]
-          * $ cvs -d :pserver:pyre@cvs.cacr.caltech.edu:/pyre co templates 
-   6. change to templates directory
-          * $ cd $TEMPLATES_DIR 
-   7. build templates
-          * $ mm 
-
-$DV_DIR should now have the following structure::
-
-  builds/  config/  templates/  tools/
-
-For support refer (point to support link)
-
-CLI
-^^^
-
-
-https://www.megam.co
-^^^^^^^^^^^^^^^^^^^^ 
