@@ -60,7 +60,7 @@ Welcome to Megam - Open source cloud automation
 **Metering Monitoring**
   You will be able to monitor and meter the servers for free. 
 
-Megam can be accessed at `megam.co <https://www.megam.co>`_, here is the `project source code <https://github.com/indykish>`_. Megam comes with a complete `documentation <http://docs.megam.co>`_.
+Megam can be accessed at `megam.co <https://www.megam.co>`_, here is the `project source code <https://github.com/indykish>`_. Megam comes with a complete `documentation <http://www.gomegam.com/docs>`_.
 
 **NEW**
   *Megam 0.1 beta1 released*.
