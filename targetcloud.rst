@@ -1,23 +1,26 @@
 #####################
-Cloud
+Target cloud
 #####################
 
-This option allows you setup multi cloud definitions.::
+This option allows you setup target cloud definitions.::
 
    1. Helpful when you run your apps/services with different memory/cpu and storage. 
 
    2. Helpful when you want to quickly launch the same app/service in a different cloud.
 
-We have provided you with one cloud default to play with.  
+You can launch your apps and service in the cloud of your choice. If your cloud isn't here, please let us know. 
+
 
 .. hint:: The supported clouds are:
-
 
 
 +------------------------+----------------------------------------------------------------------+
 | Cloud                  | Description                                                          |
 |                        |                                                                      |
 +========================+======================================================================+
+| Profit bricks          | `profitbricks.com <https://www.profitbricks.com>`_.                  |
+|                        | supported, tested with ubuntu images                                 |
++------------------------+----------------------------------------------------------------------+
 | hp (openstack)         | `hpcloud.com <https://console.hpcloud.com>`_.                        |
 |                        | supported, tested with ubuntu images                                 |
 +------------------------+----------------------------------------------------------------------+
@@ -27,17 +30,35 @@ We have provided you with one cloud default to play with.
 | Google cloud           | `google cloud <https://cloud.google.com/>`_.                         |
 |                        | supported, tested with debian images                                 |
 +------------------------+----------------------------------------------------------------------+
-| Artisan                | `artisaninfrastructure.com <http://www.artisaninfrastructure.com>`_. |
-|                        | work in progress                                                     |
+| Gogrid                 | `gogrid.com <http://www.gogride.com>`_.                              |
+|                        | 0.3 release - work in progress                                       |
++------------------------+----------------------------------------------------------------------+
+| openQRM                | `openqrm-enterprise.com.com <http://openqrm-enterprise.com>`_.       |
+|                        | 0.3 release - work in progress                                       |
 +------------------------+----------------------------------------------------------------------+
 | Podnix Cloud           | `podnix.com <https://www.podnix.com>`_.                              |
 |                        | work in progress                                                     |
 +------------------------+----------------------------------------------------------------------+
-| Profit bricks          | `profitbricks.com <https://www.profitbricks.com>`_.                  |
-|                        | work in progress                                                     |
-+------------------------+----------------------------------------------------------------------+
 
-HP
+Profit Bricks
+============================
+
+If you have your own account with profitbricks, you can use the same with megam. 
+
+1. Have the configuration handy
+
+2. The "Image can't be entered for now". But use our custom snapshot named "raring_stencil" with a canned password for the snapshot "team4megam".  
+
+3. We can fix it up to remove the canned password limitation.   
+  
+.. image:: _static/images/pb.png 
+          
+3. Click Save
+   
+4. You can see your saved settings in under ``Manage Settings`` >  ``Clouds``  
+
+
+hp(Openstack)
 ============================
 
 If you have your own account with hp, you can use the same with megam. 
@@ -53,24 +74,7 @@ If you have your own account with hp, you can use the same with megam.
 4. You can see your saved settings in under ``Manage Settings`` >  ``Clouds``   
  
 
-
-Podnix Cloud
-============================
-
-.. hint:: Under testing. Work in progress.
-
-Profit Bricks
-============================
-
-.. hint:: Under testing. Work in progress.
-
-
-Artisan
-============================
-
-.. hint:: Work in progress.
-
-
+ 
 AWS
 ============================
 
@@ -96,14 +100,32 @@ If you have your own account with AWS, you can use the same with megam.
 
 1. Have the configuration handy as per this link `GCE <https://developers.google.com/compute/docs/instances#start_vm>`_.
 
-2. Click ``Settings`` and choose ``GCE`` icon. 
+2. Watch this `Youtube video for GCE <http://youtu.be/5Q-Jynx-Ads>` 
+
+3. We use OAuth to authenticate with google. So for GCE, you need to "Click - Connect to Google" first before proceeding.
+
+4. Click ``Settings`` and choose ``GCE`` icon. 
    
 .. image:: _static/images/gce.png 
          
-3. Click Save
+5. Click Save
 
-4. You can see your saved settings in under ``Manage Settings`` >  ``Clouds``   
+6. You can see your saved settings in under ``Manage Settings`` >  ``Clouds``   
+
+
+Gogrid 
+============================
+
+.. hint:: This will be available in the 0.3 release due on April 11, 2014.
  
+
+
+openQRM
+============================
+
+.. hint:: This will be available in the 0.3 release due on April 11, 2014.
+
+
 Manage
 ============================
 

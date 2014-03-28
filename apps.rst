@@ -4,13 +4,12 @@ Apps
 
 Developing apps is easy with megam.::
 
-   1. change code
+   1. Change code
      
-   2. publish code to source code repository. {we support Github, Bitbucket under testing)
+   2. push code to source code repository. {we support Github, Assembla, Bitbucket, Cloudforge, or any  Git)
 
-Now that your code is published, let us launch it in the cloud of your choice. 
+Now that your code is pushed, let us launch it in the cloud of your choice. 
 
-This is a follow on to the ``quick launch``
 
 How do i launch in cloud ?
 ============================
@@ -48,6 +47,11 @@ Once the app is launched, to manage them.   Click ``My Apps`` from Dashboard.
  		
  Click ``your app name`` under ``My Apps``
              
- Click Delete         
+ Click Delete    
+  
+ 
+**Start, Stop, Restart, Build**
+ 
+ Build your app, when the code changes.    
   
 
