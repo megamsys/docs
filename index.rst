@@ -17,7 +17,6 @@ Contents:
    sshkeypairs.rst
    targetcloud.rst
    scms.rst
-   quickstart.rst
    apps.rst
    services.rst
    marketplace.rst
