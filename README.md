@@ -1,7 +1,7 @@
-Documentation for Megam Cloud :
+Documentation for Megam Cloud 0.2:
 ====
 
-Sphinx based documentation that gets built/hosted in [docs.megam.co](http://docs.megam.co) behind a CDN.
+Sphinx based documentation that gets built/hosted in [www.gomegam.com/docs](http://www.gomegam.com/docs).
 
 ### Requirements
 
@@ -37,7 +37,7 @@ make html
 
 ```
 
-* Before you send the pull request, make sure you runs `make clean` 
+* Before you send the pull request, make sure you run `make clean` 
 
 
 We are glad to help if you have questions, or request for new features..

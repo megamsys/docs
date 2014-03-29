@@ -29,8 +29,9 @@ Welcome to Megam - Open source cloud automation
 
 **Cloud** 
   Multi Cloud support using our Cloud Gateway. Our Cloud Gateway server is built on a rock solid trusted JVM and concise Scala.
-  We currently support AWS, hp, GCE, podnix, profitbricks, Arisan (work in progress). Virtually any cloud can be supported. 
+  We currently support AWS, hp, GCE, podnix, profitbricks, Openqrm. Virtually any cloud can be supported. 
   
+* For more information Go to `www.gomegam.com <http://www.gomegam.com>`_.
 
 **Easy to use**
    +------------------------+---------------------------------------------------------------------+
@@ -40,19 +41,21 @@ Welcome to Megam - Open source cloud automation
    | Web                    | `www.megam.co <https://www.megam.co>`_.                             |
    +------------------------+---------------------------------------------------------------------+
    | Command Line(CLI)      | Ruby based very easy to use CLI which stands up an application (or) |
-   |                        | service in Cloud in minutes.                                        |
+   |                        | service in Cloud in minutes.(work in progress)                      |
    +------------------------+---------------------------------------------------------------------+
  
 **Fast Provisioning Using Chef 11**
-  The nodes are provisioned using Chef 11, which makes it powerful and extendable cloud automation with benefits.  
+  The apps/services are provisioned using Chef 11, which makes it powerful and extendable cloud automation with benefits.  
   Chef Recipes are blueprints that tell Megam all the details needed to run an application – which middleware services to run, 
   what the dependencies are between the services, how to install the services, where to find the application and service binaries, 
   when to spawn more instances or terminate existing ones, and even how to monitor each of the services. 
-  Recipes are the mechanism that enables deployment of any middleware stack, using any data store (relational or non-relational), to any cloud. 
-  
+    
 
 **Marketplace**
-  A single click launch of pre-built popular apps like wordpress and more.
+  A single click launch of pre-built popular apps like Wordpress, PostgreSQL, Riak, Redis, Jenkins, SCM-Manager and more to come.
+
+**Disaster Recovery**
+  Build highly available apps on any cloud using `DRBD <http://www.drbd.org>`. 
   
 **Real-time Log & Offline**
   You will be able to stream logs, and do analytics on the offline logs. 
@@ -60,10 +63,14 @@ Welcome to Megam - Open source cloud automation
 **Metering Monitoring**
   You will be able to monitor and meter the servers for free. 
 
-Megam can be accessed at `megam.co <https://www.megam.co>`_, here is the `project source code <https://github.com/indykish>`_. Megam comes with a complete `documentation <http://www.gomegam.com/docs>`_.
+Megam can be accessed at `megam.co <https://www.megam.co>`_, here is the `project source code <https://github.com/megamsys>`_. Megam comes with a complete `documentation <http://www.gomegam.com/docs>`_.
 
 **NEW**
-  *Megam 0.1 beta1 released*.
+  *Megam 0.2 beta released - Mar 28, 2014*.
+  Support for Assembla, Google Cloud, Disaster recovery. 
+  `Release notes <http://blog.megam.co/archives/1306>`_.
+  
+  *Megam 0.1 beta released*.
 
   This is our first release which introduces a more friendly graphical user interface.
   

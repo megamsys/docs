@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Megam's documentation!
+Megam Cloud User Guide!
 =======================================
 
 Contents:
@@ -14,10 +14,11 @@ Contents:
    intro.rst
    architecture.rst
    install.rst
-   quickstart.rst
+   sshkeypairs.rst
+   targetcloud.rst
+   scms.rst
    apps.rst
    services.rst
-   crosscloud.rst
    marketplace.rst
    usecases.rst
    configure.rst
@@ -25,6 +26,6 @@ Contents:
    contactus.rst
    support.rst
    
-..   cloudsetup.rst
-..   scaling.rst
+
+..scaling.rst
    
