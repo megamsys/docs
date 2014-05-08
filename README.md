@@ -1,13 +1,13 @@
-Documentation for Megam Cloud 0.2:
-====
+Documentation for Megam
+==============================
 
-Sphinx based documentation that gets built/hosted in [www.gomegam.com/docs](http://www.gomegam.com/docs).
+Sphinx based documentation that gets built/hosted in [www.gomegam.com/docs](http://www.gomegam.com/docs/0.4).
 
 ### Requirements
 
 > 
 [Sphinx ](http://sphinx-doc.org/)
-[Ubuntu 13.10 +] (http://ubuntu.com)
+[Ubuntu 12.04 +] (http://ubuntu.com)
 
 
 ### Setting up [Spinx](http://sphinx-doc.org)
@@ -54,9 +54,10 @@ We are glad to help if you have questions, or request for new features..
 |                      |                                          |
 |:---------------------|:-----------------------------------------|
 | **Author:**          | Rajthilak (<rajthilak@megam.co.in>)
-|		       	       | KishorekumarNeelamegam (<nkishore@megam.co.in>)
+|	               | Varadarajan Narayanan(rad@megam.co.in)
+|	       	       | KishorekumarNeelamegam (<nkishore@megam.co.in>)
 |                      | Thomas Alrin(<alrin@megam.co.in>)
-| **Copyright:**       | Copyright (c) 2012-2013 Megam Systems.
+| **Copyright:**       | Copyright (c) 2013-2014 Megam Systems.
 | **License:**         | Apache License, Version 2.0
 
 Licensed under the Apache License, Version 2.0 (the "License");
