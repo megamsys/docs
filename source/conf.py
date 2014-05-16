@@ -54,7 +54,7 @@ copyright = '2014, Megam Team <gomegam@megam.co.in>'
 # built documents.
 #
 # The short X.Y version.
-version = '0.4'
+version = '0.5'
 # The full version, including alpha/beta/rc tags.
 release = version
 
@@ -323,9 +323,8 @@ html_theme_options = {
     # Note the "1" or "True" value above as the third argument to indicate
     # an arbitrary url.
     'navbar_links': [
-        ("OpenNebula.org","http://gomegam.com",1),
+        ("Gomegam","http://gomegam.com",1),
         ("Dev","http://www.megam.co",1),
-        ("Archives","http://opennebula.org/documentation:archives",1),
     ],
 
     # Render the next and previous page links in navbar. (Default: true)

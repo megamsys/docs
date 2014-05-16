@@ -1,6 +1,8 @@
-=======================
-Megam 0.4 Documentation
-=======================
+===================================
+Megam 0.5 Documentation
+===================================
+
+.. note:: 0.5 version is currently under developement.
 
 .. _entry_point:
 
@@ -12,6 +14,7 @@ Megam 0.4 Documentation
    Administration Guide <administration/index>
    Users Guide <users/index>
    Integration Guide <integration/index>
+
 
 .. raw:: html
    :file: toc.html

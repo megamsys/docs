@@ -4,6 +4,7 @@
 An Overview of Megam DSL
 ===================================
 
+A domain-specific language (DSL) is a computer language specialized to a particular application domain. This is in contrast to a general-purpose language (GPL), which is broadly applicable across domains, and lacks specialized features for a particular domain. There are a wide variety of DSLs, ranging from widely used languages for common domains, such as HTML for web pages, down to languages used by only a single piece of software. 
 
 
 What Are the Key Features Provided by Megam - DSL ?
