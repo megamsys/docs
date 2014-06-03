@@ -1,7 +1,7 @@
 Documentation for Megam
 ==============================
 
-Sphinx based documentation that gets built/hosted in [www.gomegam.com/docs](http://www.gomegam.com/docs/0.4).
+Sphinx based documentation that gets built/hosted in [www.gomegam.com/docs](http://www.gomegam.com/docs).
 
 ### Requirements
 
