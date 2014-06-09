@@ -7,32 +7,28 @@ Installing the Software
 This page shows you how to install Megam from the binary packages.
 
 
-      
 
 Step 1. Front-end Installation
 ==============================
 
 
-1.1. Installing on CentOS
--------------------------
+
+Step 2. Ruby Runtime/OpenJDK Installation
+==========================================
 
 
-
-1.2. Installing on Debian/Ubuntu
+1.1. Installing on Debian/Ubuntu
 --------------------------------
 
 
 
-
-Step 2. Ruby Runtime Installation
-=================================
 
 
 Step 3. Starting Megam
 =======================
 
 
-	
+
 
 
 

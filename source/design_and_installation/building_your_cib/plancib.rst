@@ -11,35 +11,62 @@ Architectural Overview
 
 Megam assumes that your physical infrastructure adopts a classical cluster-like architecture with a front-end, and a set of hosts where Virtual Machines (VM) will be executed. There is at least one physical network joining all the hosts with the front-end.
 
-|high level architecture of cluster, its components and relationship|
 
-The basic components of an Megam system are:
+|Megam Typical ONE|
 
--  **Front-end** that executes the Megam services.
+The basic components of a Cloud in a box system are:
+
+-  **Front-end** that executes the front end services of a private cloud.
 -  **Hosts** that are the physical machines.
 
 
-|Megam Cloud In A Box Support|
-
 Front-End
-=========
+-----------
 
 
-Monitoring
+
+Host
+-------
+
+
+Existing Operation System
+==========================
+
+Step 1. Register at Megamn
+---------------------------
+
+
+Step 2. Cloud in box : Installation
+--------------------------------------
+
+
+
+
+
+
+
+Baremetal
 ==========
+This is an `optional step`. You can install the operating sytem using a CD or USB mechanism. Network boot eases the process of install if the number of machines to install is large.
 
-
-Target Clouds
-==============
-
-
-Highly Available
-================
-
-|image3|
+|Megam Cobblerd|
 
 
 
-.. |high level architecture of cluster, its components and relationship| image:: /images/megamcib_high.png
-.. |Megam Cloud In A Box Support| image:: /images/overview_builders.png
-.. |image3| image:: /images/megam_ha.png
+Step 1. Register at Megamn
+---------------------------
+
+
+
+Step 2. Cobblerd  : Installation
+--------------------------------------
+
+This script works in Ubuntu trusty.
+
+
+Step 3. Cloud in box : Installation
+--------------------------------------
+
+
+.. |Megam Typical ONE| image:: /images/megam_typical_one.png
+.. |Megam Cobblerd| image:: /images/megam_cloud_in_a_box_baremetal.png

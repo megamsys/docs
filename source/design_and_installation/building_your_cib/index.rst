@@ -1,5 +1,5 @@
 =================================
-Building your Platform As Service
+Building your Cloud in  a box
 =================================
 
 .. toctree::

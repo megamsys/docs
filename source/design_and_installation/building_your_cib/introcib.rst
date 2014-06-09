@@ -4,46 +4,44 @@
 An Overview of Megam Cloud in a Box
 ===================================
 
+Megam Cloud in a box - a simple flexible solution to setup  a private cloud based on OpenNebula or Ganeti  in minutes.
 
+
+|Megam Cloud In A Box|
 
 What Are the Key Features Provided by Megam - Cloud in a Box ?
 ==============================================================
 
 
-|Megam Cloud Interfaces|
++------------------------------+-----------------------------------+
+|          Features            |          Cloud in  a Box          |
++==============================+===================================+
+| ``Setup Private Cloud``      | Quickly setup a private cloud     |
++------------------------------+-----------------------------------+
+| ``Bare metal to cloud``      | Yes                               |
++------------------------------+-----------------------------------+
+| ``Hardware Appliance``       | Yes.                              |
++------------------------------+-----------------------------------+
 
 
 What Does Megam - Cloud in a Box Offer to Cloud Consumers?
 ==========================================================
 
+**An user interface** to consume a private cloud.
 
-|Megam Cloud Support for Virtual Infrastructures|
 
 
 What Does Megam - Cloud in a Box Offer to Cloud Operators?
 ==========================================================
 
+**Private cloud** environment
 
-|Megam Cloud Internals|
 
 
 What Does Megam - Cloud in a Box Offer to Cloud Builders?
 =========================================================
 
-
-|Megam Cloud Platform Support|
-
-
-What Does Megam - Cloud in a Box Offer to Cloud Integrators?
-============================================================
+Build you own cloud and ship it in the hardware of your choice.
 
 
-|Megam Cloud Architecture|
-
-
-.. |Megam Cloud Interfaces| image:: /images/overview_interfaces.png
-.. |Megam Cloud Internals| image:: /images/overview_operators.png
-.. |Megam Cloud Platform Support| image:: /images/overview_internals.png
-.. |Megam Cloud Support for Virtual Infrastructures| image:: /image/overview_vi.png
-.. |Megam Cloud Architecture| image:: /images/overview_integrators.png
-
+.. |Megam Cloud In A Box| image:: /images/megam_cloud_in_a_box.png
