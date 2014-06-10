@@ -43,7 +43,6 @@ Code Sample
 
 This is a small code snippet which uses `Newman <https://github.com/stackmob/newman>_`. As you can see, the code flow would be as follows:
 
-.. code::
 
 
 

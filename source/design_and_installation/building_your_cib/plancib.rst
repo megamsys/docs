@@ -32,7 +32,7 @@ Host
 Existing Operation System
 ==========================
 
-Step 1. Register at Megamn
+Step 1. Register at Megam
 ---------------------------
 
 
@@ -47,13 +47,15 @@ Step 2. Cloud in box : Installation
 
 Baremetal
 ==========
-This is an `optional step`. You can install the operating sytem using a CD or USB mechanism. Network boot eases the process of install if the number of machines to install is large.
+You can install the operating sytem using a CD or USB mechanism and follow the above process.
+
+Network boot eases the process of install if the number of machines to install is large.
 
 |Megam Cobblerd|
 
 
 
-Step 1. Register at Megamn
+Step 1. Register at Megam
 ---------------------------
 
 

@@ -6,7 +6,7 @@ Platform Notes
 
 This page will show you the specific considerations at the time of using an Megam, according to the different supported platforms.
 
-.. hint:: Releasing an updated version shortly. 
+.. hint:: Releasing an updated version shortly.
 
 +------------------------------+-----------------------------------------------------------------------------+
 | Certified Platform Component |                                   Version                                   |

@@ -19,17 +19,17 @@ Megam Components
 Megam Resources
 ====================
 
--  **platform_endpoint**: 
--  **platform**: 
--  **assemblies**: 
+-  **platform_endpoint**:
+-  **platform**:
+-  **assemblies**:
 -  **components**:
--  **plans**: 
+-  **plans**:
 -  **marketplaces**:
 -  **marketplaceaddons**:
- 
+
+ :ref:`REST API <restapi>`. 
 
 Megam Management
 =====================
 
 -  **sandy@megamsandbox.com**: Special administrative account. See the :ref:`Users and Groups guide <manage_users>`.
-

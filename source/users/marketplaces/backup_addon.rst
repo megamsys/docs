@@ -4,8 +4,7 @@
 #####################
 Backup Addon
 #####################
-
-This allows you to backup an exisiting ref: ``Apps <apps>``/``Services <services_intro>``  in a single click.
+This allows you to backup an exisiting :ref:`Apps <apps>`/ :ref:`Services <services_intro>`  in a single click.
 
 |backup process architecture|
 
@@ -26,7 +25,7 @@ When a directory of an app/service that runs on Megam is selected by the user, t
 Requirements
 ------------------
 
-A :ref:`Target cloud <targetcloud>` setting is needed needed before you launch the same.
+A :ref:`Target cloud <targetcloud>` setting is needed before you launch the same.
 
 
 Launch Backup Addon

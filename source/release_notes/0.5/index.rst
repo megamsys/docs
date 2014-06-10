@@ -1,7 +1,7 @@
 .. _rn:
 
 =================
-Release Notes 0.4
+Release Notes 0.5
 =================
 
 .. toctree::
@@ -11,7 +11,3 @@ Release Notes 0.4
    Features <features>
    Platform Notes <uspng>
    Known Issues <known_issues>
-
-
-
-
