@@ -8,5 +8,5 @@ Building your Platform As Service
    An Overview of Megam <intropaas>
    Understanding the Megam Model <understand>
    Planning the Installation <plan>
-   Installing the Software <ignc>
+   Installing the Software <install_megam>
    Glossary <glossarypaas>
