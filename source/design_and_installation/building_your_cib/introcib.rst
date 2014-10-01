@@ -4,8 +4,8 @@
 An Overview of Megam Cloud in a Box
 ===================================
 
-Megam Cloud in a box - a simple flexible solution to setup  a private cloud based on OpenNebula or Ganeti  in minutes.
-
+Megam Cloud in a box - an automation to setup  a private cloud with PaaS based on OpenNebula  in minutes.
+This means you can get a production ready IaaS and PaaS in your datacenter. You can setup ``Cloud In a Box`` in your own hardware (or)  contact our hardware partners and set it up in new hardware.
 
 |Megam Cloud In A Box|
 
@@ -16,32 +16,27 @@ What Are the Key Features Provided by Megam - Cloud in a Box ?
 +------------------------------+-----------------------------------+
 |          Features            |          Cloud in  a Box          |
 +==============================+===================================+
-| ``Setup Private Cloud``      | Quickly setup a private cloud     |
+| ``Private Cloud``            | Painless setup of private cloud   |
 +------------------------------+-----------------------------------+
 | ``Bare metal to cloud``      | Yes                               |
 +------------------------------+-----------------------------------+
-| ``Hardware Appliance``       | Yes.                              |
+| ``Cloud Ready Hardware``     | Yes.                              |
 +------------------------------+-----------------------------------+
 
 
 What Does Megam - Cloud in a Box Offer to Cloud Consumers?
 ==========================================================
 
-**An user interface** to consume a private cloud.
+**An easy way** to consume a private IaaS and PaaS.
 
 
 
 What Does Megam - Cloud in a Box Offer to Cloud Operators?
 ==========================================================
 
-**Private cloud** environment
+**You own** private IaaS and PaaS environment. This can be used by your end users who will benefit by
+launching applications and services.
 
-
-
-What Does Megam - Cloud in a Box Offer to Cloud Builders?
-=========================================================
-
-Build you own cloud and ship it in the hardware of your choice.
 
 
 .. |Megam Cloud In A Box| image:: /images/megam_cloud_in_a_box.png

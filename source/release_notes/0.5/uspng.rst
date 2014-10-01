@@ -4,16 +4,30 @@
 Platform Notes
 ===============
 
-This page will show you the specific considerations at the time of using an Megam, according to the different supported platforms.
+This page will show you the specific considerations at the time of using ``Cloud In a Box`` and ``Megam``
 
-.. hint:: Releasing an updated version shortly.
+Cloud In a Box
+===================
 
 +------------------------------+-----------------------------------------------------------------------------+
-| Certified Platform Component |                                   Version                                   |
+| Platform                     |                                   Version                                   |
 +==============================+=============================================================================+
-| Ubuntu Server                | 12.04 (LTS) & 14.04 (LTS)                                                   |
+| ``Ubuntu``                   | 14.04 (LTS)                                                                 |
 +------------------------------+-----------------------------------------------------------------------------+
-| CentOS                       | 6.5                                                                         |
+
+
+Megam
+===================
+
 +------------------------------+-----------------------------------------------------------------------------+
-| Debian                       | 7.1                                                                         |
+| Platform                     |                                   Version                                   |
++==============================+=============================================================================+
+| ``Ubuntu``                   | 12.04 (LTS) & 14.04 (LTS)                                                   |
 +------------------------------+-----------------------------------------------------------------------------+
+| ``Debian``                   | 7.1 *coming soon*                                                           |
++------------------------------+-----------------------------------------------------------------------------+
+| ``CentOS``                   | 7.0 *coming soon*                                                           |
++------------------------------+-----------------------------------------------------------------------------+
+
+
+.. hint:: We will release support for other platforms shortly. If want us to expedite support for a specific platform, please contact us `support@megam.co <mailto:support@megam.co>`_.

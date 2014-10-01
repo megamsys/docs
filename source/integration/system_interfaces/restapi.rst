@@ -10,7 +10,7 @@ Overview
 The Megam REST API is a API that a Platform as a Service offering presents to the consumer of the platform. The API is the interface into a platform implementation layer that controls the deployment of applications and their use of the platform.
 This underlying core uses TOSCA specification provides a language to describe service components and their relationships using a service topology, and it provides for describing the management procedures that create or modify services using orchestration processes.
 
-This guide is intended for ``developers``.
+This guide is intended for ``developers``. The REST API is a cut-down version of CAMP (which is very close to this).
 
 
 Authentication & Authorization
@@ -34,7 +34,7 @@ Any interface that wants to talk to Megam shall do the following.
 -  **platforms**: This resource has all the deployed entities on Megam for an user.
 -  **assemblies**: This resource has all the assembled resources on Megam.
 
-.. warning:: The main resources are shown above, and is the starting point for the REST API. A detail doc will be released  in **https://api.megam.co** shortly.
+.. warning:: The main resources are shown above, and is the starting point for the REST API. Refer **https://api.megam.co** for more information.
 
 |Megam CAMP Usecases|
 
@@ -49,38 +49,32 @@ The other important attribute to configure the datastore is the transfer drivers
 +------------------------------+-----------------------------------+-------------------------+
 |          Megam               |          TOSCA                    |       CAMP              |
 +==============================+===================================+=========================+
-| ``PDP``                      | CSAR                              | PDP                     |
+| ``csars``                    | CSAR                              | PDP                     |
 +------------------------------+-----------------------------------+-------------------------+
-| ``?``                        | Topology/ServiceTemplate          | AssemblyTemplate        |
+| ``N/A``                      | Topology/ServiceTemplate          | AssemblyTemplate        |
 +------------------------------+-----------------------------------+-------------------------+
-| ``NodeType``                 | NodeType                          | Service                 |
+| ``nodetypes``                | NodeType                          | Service                 |
 +------------------------------+-----------------------------------+-------------------------+
-| ``RelationshipType``         | RelationshipType                  | N/A                     |
+| ``N/A (csar.yml)``           | RelationshipType                  | N/A                     |
 +------------------------------+-----------------------------------+-------------------------+
-| ``CapabilityType``           | CapabilityType                    | N/A                     |
+| ``N/A (csar.yml)``           | CapabilityType                    | N/A                     |
 +------------------------------+-----------------------------------+-------------------------+
-| ``?``                        | NodeTemplate                      | ComponentTemplate       |
+| ``csar.yml``                 | NodeTemplate                      | Plans                   |
 +------------------------------+-----------------------------------+-------------------------+
-| ``Components``               | N/A                               | Component               |
+| ``components``               | N/A                               | Components              |
 +------------------------------+-----------------------------------+-------------------------+
-| ``Assemblies``               | N/A                               | Assembly                |
+| ``assemblies``               | N/A                               | Assemblies              |
 +------------------------------+-----------------------------------+-------------------------+
-| ``Artifacts``                | Artifact                          | Artifact                |
+| ``artifacts``                | Artifacts                         | Artifacts               |
 +------------------------------+-----------------------------------+-------------------------+
-| ``Requirements``             | Requirements                      | Requirements            |
-|                              | Capabilities                      | Capabilities            |
+| ``inputs``                   | Inputs                            | Parameters              |
+| ``outputs``                  | Outputs                           |                         |
 +------------------------------+-----------------------------------+-------------------------+
-| ``Relationships``            | Relationships                     | Requirement fulfillment |
-+------------------------------+-----------------------------------+-------------------------+
-| ``Inputs``                   | Inputs                            | Parameters              |
-| ``Outputs``                  | Outputs                           |                         |
-+------------------------------+-----------------------------------+-------------------------+
-| ``Operations``               | Interfaces                        | Operations              |
-| ``Sensors``                  |                                   | Sensors                 |
+| ``operations``               | Interfaces                        | Operations              |
+| ``sensors``                  |                                   | Sensors                 |
 +------------------------------+-----------------------------------+-------------------------+
 
 .. note:: ``Megam``  incorporating related work/concepts from TOSCA and CAMP. These specs are both evolving and there is scope for them to converge to something simple, intuitive, and powerful: this is an aim towards that convergence, and is believed to map nicely on to all (TOSCA, and CAMP), and make it easy to represent other popular tools and techniques (e.g. Juju, Puppet, Chef, Salt, Ansible).
-
 
 platform_endpoints
 ====================
@@ -113,8 +107,8 @@ GET
 
 
   {
-  "description": "Platform endpoint for Megam version 0.5",
-  "tags": [],
+    "description": "Platform endpoint for Megam version 0.5",
+    "tags": [],
   "representation_skew": "active",
   "platform_uri": "https://api.megam.co/v2/platforms",
   "specification_version": "1.1",
@@ -122,6 +116,41 @@ GET
   "implementation_version": "1.1",
   "backward_compatible_implementation_versions": [],
   "auth_scheme": "custom"
+  }
+
+csars
+==================
+
+GET
+----
+
+.. code::
+
+  {
+    "csar_items" : [{
+      "description": "IoT application that talks to my car",
+      "tags": [],
+      "csar_link": "https://ceph.storage.co/csars/90909080000",
+    },{
+      "description": "Scaled Node.js application",
+      "tags": [],
+      "csar_link": "https://ceph.storage.co/csars/90909080000",
+    }]
+  }
+
+
+POST
+----
+
+An YAML is uploaded to the cloud storage prior to this POST. In this example we use ceph.
+
+.. code::
+
+
+  {
+    "description": "IoT application that talks to my car",
+    "tags": [],
+    "csar_uri": "https://ceph.storage.co/csars/90909080000"
   }
 
 
@@ -228,142 +257,4 @@ GET
 
 
 
-services
-==========
-
-This resource acts as a container for the service resources of this platform. This resource has the following, general representation:
-This attribute contains Links to the service resources that represent the services available to the Consumer.
-
-
-GET
-----
-
-.. code::
-
-	{
-  "uri": URI,
-  "name": String,
-  "type": "services",
-  "description": String ?,
-  "tags": String[] ?,
-  "representation_skew": String ?,
-  "service_links": Link[] ?,
-	}
-
-service
-=========
-
-A service resource represents a particular configuration of a service available for use by one or more applications. This resource has the following, general representation:
-
-
-GET
-----
-
-.. code::
-
-	{
-   "uri": URI,
-   "name": String,
-   "type": "service",
-   "description": String ?,
-   "tags": String[] ?,
-   "representation_skew": String ?,
-   "parameter_definitions_uri": URI ?
-    }
-
-plans
-=========
-
-GET
-----
-
-.. code::
-
-    {
-  "uri": URI,
-  "name": String,
-  "type": "plans",
-  "description": String ?,
-  "tags": String[] ?,
-  "representation_skew": String ?,
-  "plan_links": Link[] ?,
-  "parameter_definitions_uri": URI
-  }
-
-
-plan
-=======
-
-GET
----
-
-.. code::
-
-  {
-  "uri": URI,
-  "name": String,
-  "type": "plan",
-  "description": String ?,
-  "tags": String[] ?,
-  "representation_skew": String ?,
-  "camp_version": String,
-  "origin": String ?,
-  "artifacts": [
-    {
-      "name": String ?,
-      "description": String ?,
-      "tags": String[] ?,
-      "artifact_type": String,
-      "content": { "href": URI },
-      "requirements": [
-        {
-          "requirement_type": String,
-          "fulfillment": {
-            "name": String ?,
-            "description": String ?,
-            "tags": String[] ?,
-            "id": String ?,
-            "href": URI ?,
-            "characteristics": {
-              characteristic: String +
-            }
-          }
-        }
-      ],
-    }
-  ],
-  "services": [
-    {
-      "name": String ?,
-      "description": String ?,
-      "tags": String[] ?,
-      "id": String ?,
-      "href": URI ?,
-      "characteristics": {
-        characteristic: String +
-      }
-    }
-  ]
-   }
-
-
-
-Extensions
-===========
-
-
-.. code::
-
-
-           {
-                "description": "Megam CAMP Extension API",
-                "representation_skew": "active",
-                "tags": "megam_beta",
-                "extension_links": [{
-                        "https://api.megam.co/v2/accounts",
-                        "https://api.megam.co/v2/nodes",
-                        "https://api.megam.co/v2/marketplace_addons"
-                    }],
-            }
-
-.. |Megam CAMP Usecases| image:: /images/megam_camp_usecases.png
+.. |Megam CAMP Usecases| image:: /images/megam_camp_highlevel.png

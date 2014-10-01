@@ -11,17 +11,23 @@ The Megam CAMP API is a RESTful service to create, control and manage cloud appl
 
 The purpose of the Megam CAMP API is to manage the building, running, administration, monitoring and patching of applications/services in the cloud. Its purpose is to enable interoperability among self-service interfaces to PaaS clouds by defining artifacts and formats that can be used with any conforming cloud and enable independent vendors to create tools and services that interact with any conforming cloud using the defined interfaces.
 
+Scenario : User creates New Assembly
+------------------------------------
+This example illustrates a scenario in which the application administrator wants to run and monitor an application. It assumes that the application package(PDP) is made available to Megam, either because it was uploaded to the platform or developed directly on the platform.
+
+|Megam CAMP Usecase New|
+
+**What is created by the user ?** An user working on an application development environment(ADE) (or) on Cloud uploads a `/assembly (json) -<link it to assembly>` with the CAMP Provider through the platform_endpoint. In a multi tenant model, the roles (Developer, Application Administrator) and what these role are capable off are handled by an Identity product.
+
+
+Scenario : User uploads a CSAR
+--------------------------------
 
 This example illustrates a scenario in which the application administrator wants to run and monitor an application. It assumes that the application package(PDP) is made available to Megam, either because it was uploaded to the platform or developed directly on the platform.
 
 |Megam CAMP Usecase Import|
 
-What is uploaded here by the developer ? A developer working on an application development environment(ADE) or on Cloud uploads a PDP with the CAMP Provider through the platform_endpoint. In a multi tenant model, the roles (Developer, Application Administrator) and what these role are capable off are handled by an Identity product.
-
-
-|Megam CAMP Usecase New|
-
-What is uploaded here by the developer ? A developer working on an application development environment(ADE) or on Cloud uploads a PDP with the CAMP Provider through the platform_endpoint. In a multi tenant model, the roles (Developer, Application Administrator) and what these role are capable off are handled by an Identity product.
+**What is imported by the user ?** An user working on an application development environment(ADE) (or) on Cloud uploads a CSAR (yaml) with the CAMP Provider through the platform_endpoint. In a multi tenant model, the roles (Developer, Application Administrator) and what these role are capable off are handled by an Identity product.
 
 
 On receiving such a request Megam unpacks the application package(PDP), parses and validates the deployment plan, resolves the service dependencies described by that plan and starts the application. On successful start the platform creates a new resource representing the running application (assembly) and provides the URL of that resource "/my_paas/assembly/1" in the response as shown below.
@@ -57,12 +63,6 @@ components
 A component represents a runtime component. This resource has the following, general representation:
 
 
-services
-----------
-
-A service resource represents a particular configuration of a service available for use by one or more applications. This resource has the following, general representation:
-
-
 
 Account
 ------------
@@ -71,14 +71,6 @@ Account
 
 This resources represents a customer in Megam.
 
-
-
-Nodes
-------------
-
-.. note:: This an Megam CAMP Extension API
-
-This resources represents a VM node  in Megam.
 
 
 Marketplaces
@@ -98,17 +90,10 @@ Marketplaces Addons
 This resources represents a marketplace addons available in Megam Marketplace.
 
 
-
-
-
-
-
-
-
 - :ref:`REST API <restapi>`
 - :ref:`Megam DSL and TOSCA <megamdsl>`
 
 
-.. |Megam CAMP Resources| image:: /images/megam_camp_resources.png
+.. |Megam CAMP Resources| image:: /images/megam_camp_tosca_compared.png
 .. |Megam CAMP Usecase Import| image:: /images/megam_camp_usecase_import.png
-.. |Megam CAMP Usecase New| image:: /images/megam_camp_usecase_new.png
+.. |Megam CAMP Usecase New| image:: /images/megam_camp_usecases_new.png
