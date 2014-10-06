@@ -7,24 +7,24 @@ Contact us
 =======================================
 
 ######################
-Contributions  
+Contributions
 ######################
 
 Megam is an open source project. We are a team of open source enthusiasts and would be glad to see any body
-send us pull requests. 
+send us pull requests.
 
 Our technical know how will be a good starting point and it has details on how to contribute.
 
-* Flatcloud - slideshare: `http://slidesha.re/1h8k9tt <http://slidesha.re/1h8k9tt>`_
+* Under the hood - slideshare: `http://slidesha.re/1h8k9tt <http://slidesha.re/1h8k9tt>`_
 
 * Fork the code: `https://github.com/megamsys <https://github.com/megamsys>`_
 
-Email `nkishore@megam.co.in <mailto:nkishore@megam.co.in>`_ for any questions.  
+Email `nkishore@megam.co.in <mailto:nkishore@megam.co.in>`_ for any questions.
 
 
 
 ######################
-Megam Systems (India)  
+Megam Systems (India)
 ######################
 
 Plot No. 53, D.No 2/1075, Ist Floor, Second cross, Radha nagar, Perumbakkam, Chennai 100

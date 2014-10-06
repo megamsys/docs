@@ -295,7 +295,7 @@ man_pages = [
 #  dir menu entry, description, category)
 texinfo_documents = [
   ('index', 'Megam', 'OpenNebula Documentation',
-   'Megam Team <gomegam@megam.co.in>', 'Megam', 'One line description of project.',
+   'Megam Team <gomegam@megam.co.in>', 'Megam', 'Cloud In a Box, Cloud orchestration.',
    'Miscellaneous'),
 ]
 
@@ -352,7 +352,7 @@ html_theme_options = {
 
     # Fix navigation bar to top of page?
     # Values: "true" (default) or "false"
-    'navbar_fixed_top': "true",
+    'navbar_fixed_top': "false",
 
     # Location of link to source.
     # Options are "nav" (default), "footer" or anything else to exclude.
@@ -364,7 +364,7 @@ html_theme_options = {
     # such as "amelia" or "cosmo".
     #
     # Note that this is served off CDN, so won't be available offline.
-    'bootswatch_theme': "cosmo",
+    'bootswatch_theme': "",
 
     # Choose Bootstrap version.
     # Values: "3" (default) or "2" (in quotes)

@@ -9,4 +9,5 @@ Building your Cloud in  a box
    Understanding the Cloud in a Box Model <understandcib>
    Planning the Installation <plancib>
    Installing the Software <ignccib>
+   Hardware Partners <hwcib>
    Glossary <glossarycib>

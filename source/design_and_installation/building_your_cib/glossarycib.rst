@@ -4,9 +4,10 @@
 Glossary
 =========
 
-Megam Components
+Megam CIB Components
 =====================
 
--  **Front-end**: Machine running the Megam services.
--  **Hosts**: Physical machine running a supported hypervisor `Host subsystem <http://docs.opennebula.org/4.6/administration/hosts_and_clusters/hostsubsystem.html#hostsubsystem>`__.
--  **Self-Service** Megam web interface consumed by an end user.
+-  **CIB Base Unit** : The first node running CIB Web.
+-  **CIB Node**      : Physical machine running a supported hypervisor `Host subsystem <http://docs.opennebula.org/4.8/administration/hosts_and_clusters/hostsubsystem.html#hostsubsystem>`__.
+-  **CIB Web**       : The management web console used to manage CIB installation.
+-  **CIB Node Agent**: The node agent that runs in each of the CIB nodes other that CIB Base Unit.

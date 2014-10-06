@@ -7,31 +7,34 @@ OpenNebula Cloud
 Overview
 --------
 
-Megam integrates with OpenNebula by launching Apps/Services and its marketplace catalog on private cloud. This can be performed in 3 ways.
+OpenNebula can be primarily used as a platform to manage your virtualized infrastructure in the data center or cluster, which is usually referred as **Private Cloud**. OpenNebula supports *Hybrid Cloud* to combine local infrastructure with public cloud-based infrastructure, enabling highly scalable hosting environments. OpenNebula also supports *Public Clouds* by providing Cloud interfaces to expose its functionality for virtual machine, storage and network management"
 
-- **Public Megam**   : Launch an app/service from `www.megam.co <https://www.megam.co>`__
-- **Private Megam**  : Launch an app/service from a private Megam installation.
-- **Cloud in a box** : This is the same as `Private Megam` except that Megam is packaged in a specific hardware appliance.
 
-..  note:: It is assumed that `OpenNebula <http://docs.opennebula.org/4.6/design_and_installation/quick_starts/qs_ubuntu_kvm.html#qs-ubuntu-kvm>`__ is installed and configured. We recommend using `Ubuntu 13.04 +` image. You can download `Ubuntu 14.04 kvm` from `OpenNebula's marketplace <http://marketplace.c12g.com/appliance/536101948fb81d2bb8000004>`__
++------------------------+---------------------------------+-----------------------------------------+
+| Megam                  |        OpenNebula               |     Description                         |
+|                        |                                 |                                         |
++========================+=================================+=========================================+
+| Private                |      Cloud In a Box             | OpenNebula  and Megam and installed     |
+|                        |                                 | in the hardware appliance accessed      |
+|                        |                                 | privately                               |
++------------------------+---------------------------------+-----------------------------------------+
 
-In all the 3 cases, Megam's intent is to use OpenNebula as an IaaS provider providing compute, network, and storage as a service. In the case of OpenNebula its a hybrid cloud.
 
-Public Megam `https://www.megam.co`
------------------------------------
+Cloud In a Box
+-----------------------------------------
 
-Megam uses Chef to perform the orchestration on OpenNebula. This is handled using a `knife-opennebula <https://rubygems.org/gems/knife-opennebula>`__ plugin. The Public :ref:`Megam Engine <megamengine>` has `knife-opennebula <https://rubygems.org/gems/knife-opennebula>`__ plugin installed. Hence this allows us to connect to a private OpenNebula cloud.
+Both Megam and OpenNebula are Private and setup ready to go.
+
+Megam uses Chef to perform the orchestration on OpenNebula. This is handled using a `knife-opennebula <https://rubygems.org/gems/knife-opennebula>`__ plugin. The Public :ref:`Megam Engine <megamengine>` has `knife-opennebula <https://rubygems.org/gems/knife-opennebula>`__ plugin installed. This allows Megam to connect to Private OpenNebula.
 `knife-opennebula` plugin relies on a template to be defined in OpenNebula to launch from Megam. Megam provides facility in the web interface to store the different templates of OpenNebula.
 
-As Megam is running on public, there needs to be a way to connect to the VM's running inside a private premise. Hence the approach in doing would be to expose the public i/p address of a VM via a VPN.
-LogMein VPN was exercised which provides a public i/p address to Megam. A robust approach in production will be recommended using OpenVPN setup.
-
-|opennebula architecture|
-
-The base trusty image was prepared with `LogMein VPN <https://secure.logmein.com/us/labs/>`__. Refer section below **Prepare Image** to prepare an image with VPN.
 
 Prepare Image
 --------------
+
+http://marketplace.c12g.com/appliance/53e7c1b28fb81d6a69000003
+
+The base trusty image was prepared with `LogMein VPN <https://secure.logmein.com/us/labs/>`__. Refer section below **Prepare Image** to prepare an image with VPN.
 
 - **Launch a VM using Trusty image**
 - At this point the VM should be in RUNNING state.
@@ -52,87 +55,14 @@ Let us say the image is named as `trusty_snap1`
 For more information
 - `OpenNebula Managing Images <http://docs.opennebula.org/4.6/user/virtual_resource_management/img_guide.html>`__
 
-Prepare ONE FrontEnd
---------------------
-
-ONE FrontEnd needs to be prepared to send data to OneGate server and ability to join a VPN. A separate `Megam Contextualization` project was spinned off to cater to this need.
-
-Megam Contextualization.
--------------------------
-
-Megam contextualization is the process that adds to the `OpenNebula - Basic Contextualization` by providing
-
-- **Ability to push data to OneGate server**
-- **Ability to join a VPN**
-
-.. warning::
-  Hence, before we proceed further with `Megam contextualization` the image `trusty_snap1` needs to have the  `Basic OpenNebula one_context <http://docs.opennebula.org/4.6/user/virtual_machine_setup/bcont.html>`__ present.
-
-
-Ability to push data(parameters) to OneGate server
----------------------------------------------------
-
-**Why is this needed ?** This is needed to push some parameters like public i/p and let Megam know about it. OneGate server is OpenNebula's application monitoring collector. OneGate (An  application  monitoring collector) is configured and running in the ONE FrontEnd.
-
-For more information about `OneGate <http://docs.opennebula.org/4.6/advanced_administration/application_insight/onegate_usage.html>`__
-
-When the VM is launched OpenNebula allows to write a script or ruby code which will inform OneGate using  a unique token which will reside automatically inside the VM along with the OneGate URL. The script can be customized as per the need to figure out the public i/p by doing something like this:
-
-..  code::
-
-    ifconfig ham0 | grep ..
-
-And the script will run  a curl command to notify the OneGate server to notify the public i/p. When a public i/p is received OpenNebula sticks that public i/p inside the USER_TEMPLATE parameter. As Megam is constanly bombarding OneNebula for VM updates, the result should have the USER_TEMPLATE info. If there is no info in the USER_TEMPLATE  and information exists in TEMPLATE then its AWS or public cloud.
-
-Ability to join a VPN
-----------------------
-
-**Why is this needed ?** This is needed to create and join a VPN.
-
-`Refer scripts for more information: <https://github.com/megamsys/megam_onecontext>`__
-
-Clone : Megam Contextualization
---------------------------------
-
-From the ONE FrontEnd server store this in a location like eg: ``/home/oneadmin/megam``
-
-..  code::
-
-    git clone https://github.com/megamsys/megam_onecontext
-
-3 scripts will be available.
-
-- **init.sh**: calls `megam_onegate_push.sh` and `megam_vpn.sh`
-- **megam_onegate_push.sh**: Sends data to your OneGate server.
-- **megam_vpn.sh**: Use VPN if NEW_VPN flag is present in your template.
-
 
 Prepare Template
 --------------------
 
 A template file is needed to be setup in OpenNebula before launching with Megam. A template consists of a set of attributes that defines a Virtual Machine. Using the command ``onetemplate create``, a template can be registered in OpenNebula to be later instantiated by Megam. If you don't want VPN then remove ``NEW_VPN`` flag completely.
 
-1. Sample Template
--------------------
 
-This a sample hybrid VM Template setup in opennebula which would launch a VM in AWS(EC2).
-
-.. code::
-
-
-    # Local Template section
-    NAME=MNyWebServer
-
-    CPU=1
-    MEMORY=256
-
-    DISK=[IMAGE="ubuntu-trusty"]
-    NIC=[NETWORK="public"]
-
-    EC2=[
-      AMI="ami-xxxxx" ]
-
-2. Sample Template
+Sample Template
 -------------------
 
 This a sample VM Template with ``Megam Contextualization`` and ``ssh keys`` with ``ssh-user as root`` which will launch a VM in private cloud.
@@ -165,7 +95,7 @@ This a sample VM Template with ``Megam Contextualization`` and ``ssh keys`` with
 Save and Verify Template
 ----------------------------
 
-Refer here to `Manage templates from Sunstone <http://docs.opennebula.org/4.6/administration/sunstone_gui/suns_views.html>`__.
+Refer here to `Manage templates from Sunstone <http://docs.opennebula.org/4.8/administration/sunstone_gui/suns_views.html>`__.
 
 .. code::
 
@@ -186,6 +116,7 @@ Megam - OpenNebula
 
 Let us launch an app/service from Megam. The steps are the same for Public or Private cloud lauch of OpenNebula. By having different templates in OpenNebula we can configure the launches to the appropriate cloud accordingly.
 
+
 Steps in Megam
 ----------------
 
@@ -202,7 +133,3 @@ In the above setting, we have saved template named ``ec2_nk_singapore`` which wa
 - You can see your saved settings in under ``Manage Settings`` >  ``Clouds``
 
 - Refer :ref:`here <apps>` for launching Apps/Services
-
-
-
-.. |opennebula architecture| image:: /images/megam_opennebula_try.png
