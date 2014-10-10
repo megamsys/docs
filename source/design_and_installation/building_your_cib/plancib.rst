@@ -87,8 +87,12 @@ Topology for your datacenter
 Cloud In a Box is a flexible solution with ability to provision and de-provision nodes on the fly. So the nodes #5, #6 illustrated in dotted lines can be provisioned in your data center in the future. So you can start with a 2Node setup and expand it based on your need.
 
 
-.. _cloudinabox_2node:
+Network Configuration
+-------------------------------------------
 
+
+
+.. _cloudinabox_2node:
 
 Cloud in box : 2-Nodes
 -------------------------------------------
