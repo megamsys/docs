@@ -7,7 +7,6 @@ Marketplaces
 .. toctree::
    :maxdepth: 2
 
-   Marketplace Addons <marketplace.rst>
    High Availability <ha_addon.rst>
    Backup <backup_addon.rst>
    Zarafa <zarafa_addon.rst>

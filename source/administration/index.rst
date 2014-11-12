@@ -8,7 +8,4 @@ Administration Guide
    Chef <chef/index>
    Monitoring <monitoring/index>
    DNS <dns/index>
-   Target Clouds <target_clouds/index>   
-   Users and Groups <users_and_groups/index>
-   Other Subsystems <other_subsystems/index>
-
+   Users <users/index>
