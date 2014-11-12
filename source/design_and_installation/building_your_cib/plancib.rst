@@ -25,9 +25,9 @@ The typical setup of a Cloud in a box system are:
 +------------------------+------------------------------------------------------------------------------------------+
 | CIB Node Unit #2       | that contains the compute cloud software based on ``Open Nebula``.                       |
 +------------------------+------------------------------------------------------------------------------------------+
-| CIB Node Unit #3       | that contains the storage software based on ``Ceph``.                                    |
+| CIB Storage Unit #3    | that contains the storage software based on ``Ceph``.                                    |
 +------------------------+------------------------------------------------------------------------------------------+
-| CIB Node Unit #4       | that is the highavailability node for ``CIB Base Unit #1``.                              |
+| CIB HA Unit #4         | that is the high availability node for ``CIB Base Unit #1``.                             |
 +------------------------+------------------------------------------------------------------------------------------+
 
 
@@ -40,19 +40,19 @@ Hardware requirements
 
 The following are the minimum hardware requirements. This helps to spin atleast 25 VMs using KVM hypervisor.
 
-+------------------------+------------+--------+-------+
-|    Name                | CPU        | RAM    | HD    |
-|                        | (Cores)    | (GB)   | (TB)  |
-|                        |            |        |       |
-+========================+============+========+=======+
-| CIB Base Unit #1       | 4          | 16     | 1TB   |
-+------------------------+------------+--------+-------+
-| CIB Node Unit #2       | 8          | 32     | 1TB   |
-+------------------------+------------+--------+-------+
-| CIB Node Unit #3       | 4          | 16     | 1TB   |
-+------------------------+------------+--------+-------+
-| CIB Node Unit #4       | 4          | 16     | 1TB   |
-+------------------------+------------+--------+-------+
++------------------------+------------+--------+-------------+
+|    Name                | CPU        | RAM    |   HD        |
+|                        | (Cores)    | (GB)   |  (TB)       |
+|                        |            |        |             |
++========================+============+========+=============+
+| CIB Base Unit #1       | 16         | 32     | 1TB         |
++------------------------+------------+--------+-------------+
+| CIB Node Unit #2       | 16         | 64     | 1TB         |
++------------------------+------------+--------+-------------+
+| CIB Storage Unit #3    | 16         | 32     | 1TB [4 nos] |
++------------------------+------------+--------+-------------+
+| CIB HA  Unit #4        | 16         | 32     | 1TB         |
++------------------------+------------+--------+-------------+
 
 Refer :ref:`Hardware partners <hwcib>` to procure the hardware. We would be glad to assist you as well.
 
@@ -107,7 +107,8 @@ This means that when the VMs are spinned up in Node Unit #2, the image gets tran
 Cloud in box : 3-Nodes
 -------------------------------------------
 
-.. caution:: Coming soon.
+.. note:: For more information `Overview of Storage <storage>`.
+
 
 This 3-Node setup is the minimal cloud configuration to start with. This includes a private replicated storage cluster based on `Ceph <http://ceph.com/ceph-storage/>`__ where the admin of ceph resides in ``CIB Base Unit``. The ``CIB Node Unit #3`` will run the
 Our **Cloud Ready** technology seamlessley setup the Ceph admin node to connect and access the Ceph nodes running ``Unit #3``.

@@ -1,70 +1,29 @@
-Getting started with Auto-Scaling Add-on
-Last Updated: 10/9/2014
-TUTORIALS AND SAMPLES
+.. _dockeraddon:
 
-    Sample4AutoScaling sample: Make your application elastic on megam
+====================================
+Getting started with Docker Add-on
+====================================
 
-RELATED LINKS
 
-    IBM megam Pricing Sheet
-    IBM megam Prerequisites
+Make your dockerized application/service launch in Megam.
 
-The IBM® Auto-Scaling for megam\u2122 Add-on enables you to automatically increase or decrease the compute capacity of your application. The number of application instances are adjusted dynamically based on the Auto-Scaling policy you define.
+The Docker Addon for Megam
+----------------------------
 
-To use the Auto-Scaling Add-on, complete the following steps:
+-  Add-on enables you to launch any docker image in Megam.
 
-    On megam Dashboard, click Connect an Add-on to connect the Auto-Scaling Add-on to your application.
-    For Java\u2122 applications, push your application to megam again.
-    In the megam user interface, click your application.
-    In the Add-ons section of the Dashboard, click the Auto-Scaling Add-on icon. You can now define the Auto-Scaling policy, see the Metric Statistics and view the Scaling History.
+To use the Docker Add-on, complete the following steps:
+  In the Add-ons section of the Marketplace, click the Docker Add-on icon. You can now define the ``Docker Cluster`` name, and pick a cloud to launch the cluster.
+Read about :ref:`How to pick a cloud <pickacloud>`
 
-    Policy Configuration
-        Where you can create or edit the scaling policy that contains instructions on how to trigger the scaling activities.
+|megam docker addon|
 
-        For Java applications, you can define scaling rules for CPU, JVM Heap and Memory.
 
-        For Node.js applications, you can define scaling rules for CPU and Memory.
+Docker
+^^^^^^^
 
-        For Ruby applications, you can define scaling rules for Memory.
-        Note: You can define multiple scaling rules for more than one metric type. However, the Auto-Scaling Add-on does not detect conflicts between scaling policies. When you define the scaling policy, you must ensure that multiple scaling rules do not conflict with one another, when the application scales in or scales out on a per-instance basis.
-    Metric Statistics
-        Displays the metric statistics for the instances of your application. You can see the average statistics and select specific instance to see its statistic.
-    Scaling History
-        Displays the scaling history of your applications.
+Where you can create the docker cluster it is launched by Megam and managed in the cloud of choice.
 
-        Past Week: Displays the scaling history for the past week.
+.. note:: This essentially launches a `CentOS 7` image with systemd, bundled with ``Geard``
 
-        Past Month: Displays the scaling history for the past month.
-
-        Customize Range: You can set the time period.
-        Note: You can filter the history record by selecting appropriate Scaling Status or Scaling In/Out.
-
-    Optional: To disconnect your application to the Auto-Scaling Add-on, click the Menu button and then select Disconnect Add-on.
-    Note: If you select Delete Add-on, the Auto-Scaling Add-on will be deleted from your space and will not be available for use by other applications in the space.
-
-Policy fields for the Auto-Scaling Add-on
-Table 1. Fields in the scaling policyField name 	Description
-The minumum number of application instances 	If the number of the instances equals this value, the Auto-Scaling Add-on will not scale in the application any more.
-The maximum number of application instances 	If the number of the instances equals this value, the Auto-Scaling Add-on will not scale out the application any more.
-Metric Type 	The supported metric types that can be monitored. For more information, see Table 2.
-Statistic Window 	The length of the past period during which received metric values are recognized as valid. Metric values are valid only if the timestamps fall within this period. The unit of the statWindow parameter is second.
-Breach Duration 	The length of the past period during which a scaling event might be triggered. A scaling event is triggered when collected metric values are either above the upper threshold, or below the lower threshold longer than the time specified. The unit of the Breach duration parameter is second.
-Scale Out 	You can specify a threshold that triggers a Scale Out action. You can also specify how many instances are increased when the Scale Out action is triggered.
-Scale In 	You can specify a threshold that triggers a Scale In action. You can also specify how many instances are decreased when the Scale In action is triggered.
-Cooldown period for scaling in 	After a scaling-in event occurs, other scaling requests are ignored during the length of the period that is specified by Cooldown period for scaling in. The unit of this parameter is second.
-Cooldown period for scaling out 	After a scaling-out event occurs, other scaling requests are ignored during the length of the period that is specified by Cooldown period for scaling out. The unit of this parameter is second.
-Table 2. Supported metric namesMetric name 	Description 	Supported application type
-CPU 	The utilization percentage of the CPU.
-
-    Java
-    Node.js
-
-JVM heap 	The usage percentage of the JVM heap memory.
-
-    Java
-
-Memory 	The usage percentage of the memory.
-
-    Java
-    Node.js
-    Ruby
+.. |megam docker addon| image:: /images/megam_addon_docker.png

@@ -65,7 +65,7 @@ Step 3. Cloud in box : 2-Node Installation
 
 Let us start a 2-Node installation.  We assume that the 2-Node setup is commissioned on premise and is connected to a private lan and external network.  Commissioned means the nodes are installed in their racks physically and ready to go.
 
-Read :ref:`Planning the Installation  <cloudinabox_2node>` for more information.
+Read more about :ref:`Planning the Installation  <cloudinabox_2node>`.
 
 
 |Megam 2Unit CIB|
@@ -217,11 +217,11 @@ This completes the 2-Node install.
 
 At this point you have a working OpenNebula (Private IaaS) running with Megam (PaaS) up and ready to go.
 
-- **Launch http://ip_address_cibunit1:9687**
+- Launch ``http://yourip_address_cibunit1:9687``
 
 |Megam Cloudinabox Checkpoint One2|
 
-- **Launch http://ip_address_cibunit1:8080**
+- Launch ``http://yourip_address_cibunit1:8080`` Read more about :ref:`Megam Brower-based UI <nilavu_overview>`
 
 |Megam Cloudinabox Checkpoint Megam1|
 
@@ -230,7 +230,7 @@ Step 6. Cloud in box : 3-Node Installation
 ============================================
 
 
-.. caution:: Stay tuned. We are working on it.
+.. note:: Read more about :ref:`Overview of Storage <storage>`.
 
 The Node Unit can be brought up by following **Step 5**.
 
@@ -247,7 +247,8 @@ This completes the 3-Node install.
 Step 7. Cloud in box : 4-Node Installation
 ==============================================
 
-.. caution:: Stay tuned. We are working on it.
+.. note:: Read more about :ref:`Overview of High Availability <ha>`.
+
 
 The Node Unit can be brought up by following **Step 5**.
 
@@ -282,7 +283,7 @@ Now that you have a fully functional Cloud in a Box, it is time to start learnin
 .. |Megam Cloudinabox Cobblerd| image:: /images/megam_cib_step1a_cobbler.png
 .. |Megam Cloudinabox One| image:: /images/megam_cib_step2_one.png
 .. |Megam Cloudinabox OneHost| image:: /images/megam_cib_step3_onehost.png
-.. |Megam Cloudinabox Ceph| image:: /images/server_sample.png
-.. |Megam Cloudinabox HA| image:: /images/server_sample.png
+.. |Megam Cloudinabox Ceph| image:: /images/megam_cib_3unit.png
+.. |Megam Cloudinabox HA| image:: /images/megam_cib_4unit.png
 .. |Megam Cloudinabox Checkpoint One2| image:: /images/megam_checkpoint_one2.png
 .. |Megam Cloudinabox Checkpoint Megam1| image:: /images/megam_checkpoint_megam1.png

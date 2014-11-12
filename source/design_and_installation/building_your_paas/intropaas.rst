@@ -28,6 +28,16 @@ A typical server consolidation scenario is shown above, but for businesses to in
 
   Cloud orchestration platform is standardized based on CAMP(Cloud Application Management for Platforms) and TOSCA (Topology and Orchestration Specification for Cloud Applications)
 
+OpenNebula - IaaS
+------------------
+
+Megam uses a built-in Infrastructure as a service(IaaS) to automate upon it. The IaaS used for a private datacenter is `OpenNebula <http://opennebula.org>`_.
+
+See :ref:`Overview of OpenNebula <opennebula>` for more information.
+
+
+|megam opennebula|
+
 
 There are 3 ways in using Megam.
 
@@ -60,95 +70,49 @@ Creating a Public Megam account is very straightforward.
 * Click on the "Create new account ?" button to open the signup form
 * Enter a valid email address/password (twice)
 
-Welcome to Megam - Open source cloud orchestration
-
-**Cloud**
-  Multi Cloud support using our Cloud Gateway.
-  We currently support AWS, hp, Google, Podnix, Profitbricks, OpenNebula. Virtually any cloud can be supported.
-
-* For more information Go to `www.gomegam.com <http://www.gomegam.com>`_.
-
-**Easy to use**
-   +------------------------+---------------------------------------------------------------------+
-   |                        | Description                                                         |
-   |                        |                                                                     |
-   +========================+=====================================================================+
-   | Private                | :ref:`Installation <plan>`                                          |
-   +------------------------+---------------------------------------------------------------------+
-   | Public SaaS            | `www.megam.co <https://www.megam.co>`_.                             |
-   +------------------------+---------------------------------------------------------------------+
-   | Command Line(CLI)      | Ruby based very easy to use CLI `(work in progress)`                |
-   +------------------------+---------------------------------------------------------------------+
-
-**Fast Provisioning Using Chef 11**
-  The apps/services are provisioned using Chef 11 native, which makes it powerful and extendable cloud automation with benefits.
-  Chef Recipes are blueprints that tell Megam all the details needed to run an application – which middleware services to run,
-  what the dependencies are between the services, how to install the services, where to find the application and service binaries,
-  when to spawn more instances or terminate existing ones, and even how to monitor each of the services.
-
-
-**Marketplace**
-  A single click launch of pre-built popular apps like Wordpress, PostgreSQL, Riak, Redis, SCM-Manager and many more.
-
-**Disaster Recovery**
-  Build highly available apps on any cloud using `DRBD <http://www.drbd.org>`.
-
-**Real-time Log & Offline**
-  You will be able to stream logs, and do analytics on the offline logs.
-
-**Metering Monitoring**
-  You will be able to monitor and meter the servers for free.
-
-Megam SaaS can be accessed at `megam.co <https://www.megam.co>`_, here is the `project source code <https://github.com/megamsys>`_.
-
-**NEW**
-  *Megam 0.5 Work in progress*.
-  :ref:`Upcoming Release notes <rnguide>`
-
-  *Megam 0.4 released - May 07, 2014*.
-  :ref:`Release notes <rnguideprev>`
-
-  *Megam 0.3 beta released - April 14, 2014*.
-  `Release notes <http://gomegam.com/blog/2014/04/megam-v0-3-is-out/>`_.
-
-  *Megam 0.2 beta released - Mar 28, 2014*.
-  `Release notes <http://gomegam.com/blog/2014/03/megam-cloud-v0-2-is-out/>`_.
-
-  *Megam 0.1 beta released*.
-
-  This is our first release which introduces a more friendly graphical user interface.
 
 
 What Are the Key Features Provided by Megam ?
 =================================================
 
-+------------------------------+------------------------------------+
-|          Features            |          Megam                     |
-+==============================+====================================+
-| ``Cloud In a Box``           | Real quick do-it-yourself-cloud    |
-|                              | ready                              |
-+------------------------------+------------------------------------+
-| ``Apps & Services``          | Support for platform runtime,      |
-|                              | marketplace                        |
-+------------------------------+------------------------------------+
-| ``Multi cloud support``      | AWS, Google, Profit Bricks, Gogrid |
-|                              | Podnix, hp, OpenNebula             |
-+------------------------------+------------------------------------+
-| ``Visual Designer``          | Yes. compose and wire your app &   |
-|                              | services in multi cloud            |
-+------------------------------+------------------------------------+
-| ``Services``                 | Support for services like          |
-|                              | PostgreSQL, Redis, Riak            |
-+------------------------------+------------------------------------+
-| ``Diaster Recovery``         | High availability for your         |
-|                              | Apps/Services  using DRBD          |
-+------------------------------+------------------------------------+
-| ``DNS``                      | Auto DNS for the apps/services in  |
-|                              | Megam SaaS                         |
-+------------------------------+------------------------------------+
-| ``SCM``                      | Github, Bitbucket, Assembla,       |
-|                              | SCM-Manager                        |
-+------------------------------+------------------------------------+
++-------------------------------------+--------------------------------------------------------------------------------------------------+
+|          Features                   |                                          Description                                             |
++=====================================+==================================================================================================+
+| ``Cloud In a Box``                  | Real quick do-it-yourself-cloud  ready                                                           |
++-------------------------------------+--------------------------------------------------------------------------------------------------+
+| ``Apps & Services``                 | Support for platform runtime,  marketplace                                                       |
++-------------------------------------+--------------------------------------------------------------------------------------------------+
+| ``Multi cloud support``             | Multi Cloud support using our Cloud Gateway. We currently support AWS, hp, Google,               |
+|                                     | Profitbricks, OpenNebula. Virtually any cloud can be supported.                                  |
++-------------------------------------+--------------------------------------------------------------------------------------------------+
+| ``Visual Designer``                 | Yes. compose and wire your app & services in multi cloud                                         |
++-------------------------------------+--------------------------------------------------------------------------------------------------+
+| ``Services``                        | Support for services like PostgreSQL, Redis, Riak                                                |
++-------------------------------------+--------------------------------------------------------------------------------------------------+
+| ``Diaster Recovery``                | High availability for your  Apps/Services  using DRBD                                            |
++-------------------------------------+--------------------------------------------------------------------------------------------------+
+| ``DNS``                             | Auto DNS for the apps/services in Megam SaaS                                                     |
++-------------------------------------+--------------------------------------------------------------------------------------------------+
+| ``SCM``                             | Github, Bitbucket, Assembla, SCM-Manager                                                         |
++-------------------------------------+--------------------------------------------------------------------------------------------------+
+| ``Easy to use CLI``                 | Ruby based very easy to use CLI `(work in progress)`                                             |
++-------------------------------------+--------------------------------------------------------------------------------------------------+
+| ``Fast Provisioning Using Chef 11`` | The apps/services are provisioned using Chef 11 native, which makes it powerful and              |
+|                                     | extendable cloud automation with benefits. Chef Recipes are blueprints that tell Megam           |
+|                                     | all the details needed to run an application – which middleware services to run, what the        |
+|                                     | dependencies are between the services, how to install the services, where to find the application|
+|                                     | and service binaries, when to spawn more instances or terminate existing ones, and even how to   |
+|                                     | monitor each of the services.                                                                    |
++-------------------------------------+--------------------------------------------------------------------------------------------------+
+| ``Marketplace``                     | A single click launch of pre-built popular apps like Wordpress, PostgreSQL, Riak, Redis,         |
+|                                     | SCM-Manager and many more.                                                                       |
++-------------------------------------+--------------------------------------------------------------------------------------------------+
+| ``Disaster Recovery``               | Build highly available apps on any cloud using `DRBD <http://www.drbd.org>`.                     |
++-------------------------------------+--------------------------------------------------------------------------------------------------+
+| ``Real-time Log & Offline``         | You will be able to stream logs, and do analytics on the offline logs.                           |
++-------------------------------------+--------------------------------------------------------------------------------------------------+
+| ``Metering Monitoring``             | You will be able to monitor and meter the servers for free.                                      |
++-------------------------------------+--------------------------------------------------------------------------------------------------+
 
 `For more information <http://www.gomegam.com>`_.
 
@@ -181,3 +145,4 @@ Cloud Integrators benefit indirectly from accessing Megam. These benefits includ
 -  **Build and improve Megam for your own need using the powerful REST API.**
 
 .. |traditional vs cloud| image:: /images/traditional_vs_cloud.png
+.. |megam opennebula| image:: /images/iaas_plus_paas.png
