@@ -1,8 +1,9 @@
-.. _restapi:
+.. _megamapi:
 
 ======================
-Megam REST API
+Megam API
 ======================
+
 
 Overview
 ========
@@ -34,9 +35,9 @@ Any interface that wants to talk to Megam shall do the following.
 -  **platforms**: This resource has all the deployed entities on Megam for an user.
 -  **assemblies**: This resource has all the assembled resources on Megam.
 
-.. warning:: The main resources are shown above, and is the starting point for the REST API. Refer **https://api.megam.co** for more information.
+.. warning:: The main resources are shown above, and is the starting point for the REST API.
 
-|Megam CAMP Usecases|
+|Megam API Usecases|
 
 
 Concept Alignment
@@ -186,15 +187,115 @@ GET
 
 .. code::
 
-	{
-  	"description": "Assemblys of my department",
-	"tags": ["megamtest", "megambeta"],
-  	"representation_skew": "active",
-  	"assembly_links": ["/goblin.megam.co", "/goblet.megam.co"],
-  	"parameter_definitions_uri": "https://api.megam.co/v2/beta/parameterdefns"
-	}
+  {
+    "name": "assemblies_name",
+    "assembly_links": [
+        ""
+    ],
+    "inputs": [
+        "any_global_inputs(tab, sheet, id)",
+        ""
+    ]
+  }
 
+POST
+-----
 
+.. code::
+
+  {
+    "name": "assemblies_name",
+    "assemblies": [
+        {
+            "name": "firstapp.megam.co",
+            "components": [
+                {
+                    "name": "component_1",
+                    "tosca_type": "tosca.web.Java",
+                    "requirements": {
+                        "host": "cloud_setting_id",
+                        "dummy": ""
+                    },
+                    "inputs": {
+                        "domain": "megam.co",
+                        "port": "6379",
+                        "username": " ",
+                        "password": " ",
+                        "version": " ",
+                        "source": " ",
+                        "design_inputs": {
+                            "id": "",
+                            "x": "",
+                            "y": "",
+                            "z": "",
+                            "wires": []
+                        },
+                        "service_inputs": {
+                            "dbname": " ",
+                            "dbpassword": " "
+                        }
+                    },
+                    "external_management_resource": {
+                        "url": " "
+                    },
+                    "artifacts": {
+                        "artifact_type": "tosca type",
+                        "content": "",
+                        "requirements": {
+                            "requirement_type": "create…"
+                        }
+                    },
+                    "related_components": "",
+                    "operation": {
+                        "operation_type": "linked to component. lifecyle present in tosca.type.",
+                        "target_resource": " "
+                    }
+                }
+            ],
+            "inputs": [
+                "any_global_inputs(tab, sheet, id)",
+                " "
+            ],
+            "operations": "restart/reboot",
+            "policies": {
+                "placement_policy": {
+                    "name": "placement policy",
+                    "type": "colocated",
+                    "members": [
+                        "apache2-megam",
+                        "rails2-petstore"
+                    ]
+                },
+                "ha_policy": {
+                    "name": "HA policy",
+                    "type": "colocated",
+                    "members": [
+                        "apache2-megam"
+                    ]
+                },
+                "scaling_policy": {
+                    "name": "CPU scaling for apache2 server",
+                    "type": "scaling",
+                    "members": [
+                        "apache2-megam"
+                    ],
+                    "rules": [
+                        {
+                            "name": "cpu load",
+                            "type": "cpu",
+                            "cpu_threshhold": "80"
+                        },
+                        {
+                            "name": "cpu load",
+                            "type": "mem",
+                            "mem_threshhold": "80"
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+  }
 
 assembly
 ===========
@@ -204,34 +305,25 @@ GET
 
 .. code::
 
-	{
-  	"type": "assembly",
-  	"description": "My First Java App",
-  	"tags": ["java"],
-  	"representation_skew": "Active",
-  	"components": [ { href : "nginx", name: "Webserver" } ,
-  	 { href : "nginx_tomcat", name: "NGINX Tomcat connector" },
-  	 { href : "postgresql", name: "Postgresql" },
-  	 { href : "Postgresql_connector", "postgresql_connector"}],
-  	"plan_uri": "myjavaplan",
-  	"operations_uri": "myjavaoperation",
-  	"sensors_uri": "myjavasensors"
-	}
+  {
+  "name": "assembly_name",
+  "id": "assembly_id"
+  "components": [
+      "component_1",
+      ""
+  ],
+  "inputs": [
+      "any_global_inputs(tab, sheet, id)",
+      ""
+  ],
+  "operations": "restart/reboot"
+  }
+
 
 
 component
 ============
 
-The value of the assemblies attribute is an array of Links that reference to the assembly resources of which this component resource is a member.
-The value of the artifact attribute is a URL reference to the artifact on which this component resource is based. This artifact is not a CAMP resource, but a representation of the actual artifact (e.g. WAR file, Ruby gem file, etc.)
-The artifact attribute and the service attribute are mutually exclusive.
-The value of the service attribute is a URL reference to the service resource on which this component resource is based.
-The service attribute and the artifact attribute are mutually exclusive.
-The value of this attribute indicates the status of the component represented by the component resource. This attribute MAY have one of the following values:
-RUNNING – indicates that the component is functioning as expected.
-ERROR – indicates that the component has encountered some sort of error
-This attribute contains the URI of the operations resource. The operations resource lists the operation resource links available for the component resource.
-This attribute contains a URI of the sensors resource listing the sensor resources available on this resource.
 
 
 GET
@@ -239,22 +331,54 @@ GET
 
 .. code::
 
-	{
-	  "name": String,
-  	   "type": "component",
-   		"description": "Components for a particular platform",
-  		"tags": ["megamcomponents"],
-  		"representation_skew": "Active",
-  		"assemblies": { "href": "ASM0001" , "name": "testing" },
-  		"artifact": "https://api.megam.co/artifact",
-  		"service": "",
-  		"status": "RUNNING",
-  		"external_management_resource": ""
-  		"related_components": Link[],
-  		"operations_uri": "operations",
-  		"sensors_uri": "sensors"
-	}
+  {
+    "name": "component_1",
+    "id" : "component_id",
+    "tosca_type": "tosca.web.Java",
+    "requirements": {
+        "host": "cloud_setting_id"
+    },
+    "inputs": {
+        "domain": "megam.co",
+        "port": "6379",
+        "username": " ",
+        "password": " ",
+        "version": " ",
+        "source": " ",
+        "design_inputs": {
+            "id": "",
+            "x": "",
+            "y": "",
+            "z": "",
+            "wires": []
+        },
+        "service_inputs": {
+            "dbname": " ",
+            "dbpassword": " "
+        }
+    },
+    "status": "RUNNING",
+    "outputs": {},
+    "external_management_resource": {
+        "url": " "
+    },
+    "assembly_link": [
+        " ",
+        " "
+    ],
+    "representation_skew": "NONE",
+    "artifacts": {
+        "artifact_type": "tosca type",
+        "content": "",
+        "requirements": {
+            "requirement_type": "create…"
+        }
+    },
+    "related_components": "",
+    "operation": {
+        "operation_type": "linked to component. lifecyle present in tosca.type.",
+        "target_resource": " "
+    }
+  }
 
-
-
-.. |Megam CAMP Usecases| image:: /images/megam_camp_highlevel.png
+.. |Megam API Usecases| image:: /images/megam_camp_highlevel.png

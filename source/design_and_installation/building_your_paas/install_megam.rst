@@ -15,7 +15,7 @@ Installing on Ubuntu 14.04 Trusty
 
 .. code::
 
-    sudo add-apt-repository "deb http://get.megam.co/0.5/ubuntu/ trusty testing"
+    sudo apt-add-repository "deb [arch=amd64]  http://get.megam.co/0.5/ubuntu/ trusty testing"
 
     sudo apt-key adv --keyserver keyserver.ubuntu.com --recv B3E0C1B7
 
@@ -34,7 +34,7 @@ Installing on Ubuntu 12.04 Precise
 
 .. code::
 
-    sudo add-apt-repository "deb http://get.megam.co/0.5/ubuntu/ precise testing"
+    sudo add-apt-repository "deb [arch=amd64] http://get.megam.co/0.5/ubuntu/ precise testing"
 
     sudo apt-key adv --keyserver keyserver.ubuntu.com --recv B3E0C1B7
 
@@ -67,7 +67,7 @@ The following table describes the several packages installed by Megam and their 
 +-----------------------------------+-------------------------------------------------+-----------------------------------------------------+
 | megamd                            | Engine for megam (golang)                       | `link <https://github.com/megamsys/megamd>`__       |
 +-----------------------------------+-------------------------------------------------+-----------------------------------------------------+
-| megamchefnative                   | `Native Chef <http://getchef.com>`__ server     | `link <https://github.com/ctdk/goiradi>`__          |
+| chef-server                       | `Chef 11 server<http://getchef.com>`__ server   | `link <https://github.com/opscode/chef-server>`__   |
 +-----------------------------------+-------------------------------------------------+-----------------------------------------------------+
 | megamanalytics                    | Realtime streamer -logs, and log shipper(heka)  | `link <https://github.com/megamsys/tap>`__          |
 +-----------------------------------+-------------------------------------------------+-----------------------------------------------------+
@@ -113,9 +113,13 @@ Download and run `this <https://raw.githubusercontent.com/megamsys/cloudinabox/m
 
 |Megam CIB Verify5|
 
+Step 3.
+==================
 
 
-Step 3. Next steps
+
+
+Step 4. Next steps
 ===================
 
 Now that you have a fully functional PaaS, it is time to start learning how to use it. A good starting point is this :ref:`overview of the applications <intrapps>`.

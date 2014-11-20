@@ -74,7 +74,7 @@ The absolute minimum requirement for a highly-available CIB deployment is to all
 .. warning:: We only have 1 storage node with 3 OSDs running in individual hard drives. Hence to make the storage node highly available an additional node needs to be added. Please read :ref:`CIB Storage Overview <storage>` for more details.
 
 Network Architecture
-  For better network performance and manageability, Fuel place different types of traffic into separate networks. This section describes how to distribute the network traffic in CIB using an OpenNebula cluster.
+  For better network performance and manageability, CIB place different types of traffic into separate networks. This section describes how to distribute the network traffic in CIB using an OpenNebula cluster.
 
 Public Network
   This network allows inbound connections to VMs from the outside world (allowing users to connect to VMs from the Internet). It also allows outbound connections from VMs to the outside world. For security reasons, the public network is usually isolated from other networks in cluster. The word "Public" means that these addresses can be used to communicate with cluster and its VMs from outside of cluster.

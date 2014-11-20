@@ -1,7 +1,7 @@
 .. _introcib:
 
 ===================================
-An Overview of Megam Cloud in a Box
+Overview of Megam Cloud in a Box
 ===================================
 
 Megam Cloud in a box - an automation to setup  a private cloud with PaaS based on OpenNebula  in minutes.
