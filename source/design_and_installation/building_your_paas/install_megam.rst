@@ -21,7 +21,7 @@ Installing on Ubuntu 14.04 Trusty
 
     sudo apt-get update
 
-    sudo apt-get install megamnilavu megamsnowflake megamgateway megamd megamanalytics
+    sudo apt-get install megamnilavu megamsnowflake megamgateway megamd megametcd megamanalytics
 
 
 The package hierarchy for ``Ubuntu 14.04 Trusty`` is shown below.
