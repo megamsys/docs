@@ -25,8 +25,7 @@ Read about launching the following Using Nilavu
 -  :ref:`Marketplace <marketplacesguide>`
 
 
-
-Using Visual Designer
+Visual Designer
 ======================
 
 .. note:: Click on the icon ``Visual Designer`` to launch it. This can only be launched upon launching Nilavu. Megam provides an intuitive drag and drop user interface called ``Visual Designer``
