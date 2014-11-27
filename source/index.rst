@@ -2,7 +2,7 @@
 Megam 0.5 Documentation
 ===================================
 
-.. note:: 0.5 version is currently under developement.
+.. note:: 0.5 version is currently under beta testing.
 
 .. _entry_point:
 
@@ -18,4 +18,3 @@ Megam 0.5 Documentation
 
 .. raw:: html
    :file: toc.html
-

@@ -9,4 +9,3 @@ Design and Installation Guide
 
    Building your PaaS <building_your_paas/index>
    Building your Cloud in a Box <building_your_cib/index>
-   Quick Starts <quick_starts/index>

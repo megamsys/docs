@@ -1,163 +1,143 @@
 .. _javaapp:
 
-#####################
+==================================
 Java
-#####################
+==================================
+
+Megam is an open-standards, cloud-based platform for building, managing and running apps of all types (web, mobile, big data). Capabilities include apps, mobile, application monitoring, as well as capabilities from ecosystem partners and open source, all through an as-a-service model in the cloud.
+
+If you haven't registered already, you'll need to do so at the megam home page. Just click **Sign up** for free to get set up.
+
+Now, read further to get a clear walk through on ``how to deploy a java application`` with a single click on Megam PaaS.
+
+Start by signing into Megam which takes you to the main dashboard. User logging in for the first time, belongs to a default organization. Read about :ref:`organization <orgs>`
 
 
+Starter Packs
+==============
 
+Megam Browser based UI is designed to provide minimal-yet-effective navigation for user's ease and reduces unnecessary complexities. Read about :ref:`Browser based UI <nilavu_overview>`.
 
+Once ``Create App`` is clicked from the :ref:`Browser base UI <nilavu_overview>`, the page loads to ``MarketPlace``.
 
+The marketplace contains all the applications, addons and services neatly segregated.
 
-Basic Combo
-===========
+|starter packs|
 
-1. app + dbserver
+Clicking ``Create App`` lets you choose different kinds of Runtimes (like Java or Ruby..), Services (such as PostgreSQL or Riak) and Starer packs which are essentially pre-configured application templates that are great ways to get started.
 
-Multiple components along with a service is placed in the same VM by the user(Densely Packed VMs)
-Each components have individual property dialog boxes and they pop up when the user double clicks on them.
-Since there are multiple components involved inside a same VM(Densely Packed VM),they are grouped under a common 'Group Name'.
-Each components have a **Component Name**.
-Now, all component(s) belong to a group.
+Select the ``Java Duke icon``, which opens a panel that displays more information about what it does:
 
-The group names and the component names are useful to access using an url ``something.megam.co/componentname"``
-Same steps are used for both **varai** and **normal mode**
+**Java Web Starter Pack**
+
+When an app is launched in Megam the following steps are perfomed automatically for you by an operation invoker.  The steps are hidden and abstracted from the user.
+
+- Install Tomcat 8.0
+- Install SQllite
+- Uses the built-in application template for ``Java`` and configure in the cloud.
+- Deploys and starts the Tomcat 8.0 application.
 
 |megam basiccombo javaapp|
 
+Lets look at the popup *Deploy Dialog Box* in detail.
 
-
-**JVM Runtime**
-===============
-
-
-
-Now, read further to get a clear walk through on how to deploy a java application with a single click on Megam PaaS.
-
-Start by signing into megam which takes you to the main dashboard.
-
-Megam Dashboard
----------------
-
-Megam Dashboard is designed to provide minimal-yet-effective navigation for user's ease and reduces
-unnecessary complexities.
-User logging in for the first time, belongs to a default organization.
-A user can create as many organizations as he/she wants under **User Settings**
-
-Click **CREATE AN APP** to create a new application.
-(You can also choose Visual Designer to visually drag drop various components to deploy applications)
-
-
-**Megam Java Web Starter Pack:**
---------------------------------
-
-
-Once **Create an App** is clicked, the page loads to **Megam MarketPlace.**
-The marketplace contains all the applications, addons and services neatly segregated.
-
-Click on the Java Starter Pack and a *Deploy Dialog Box* pops up.
-
-Deploy Dialog Box:
+Deploy Dialog box
 ------------------
+
+|javaweb starter|
+
 Easy 5 step deployment of a Java Application:
 
-1. Check basic combo: ``java + postgreSQL``
+1. Click ``Java``, this opens up a dialog with "Tomcat + SQlite" logo.
 
-2. Pick your application name
+2. Pick your application name. A random name is filled by default.
 
-3. Choose your IaaS provider:
-   Megam supports all major IaaS providers. Before launching in a particular IaaS provider,
-   there are certain set ups between megam and IaaS provider is necessary.
-4. BYOC(Bring Your Own Code):
-   Megam supports plethora of SCMs, select one.
-   Enter the URL of your source code
+3. Pick a cloud where you want to launch.  If you don't have a setting, then Read about :ref:`Cloud settings <cloud_settings>`
+   Megam supports all major IaaS providers. Before launching in a particular IaaS provider, there are certain setup needed as described in the :ref:`Cloud settings <cloud_settings>`.
 
-5. Click **Create an App** with all pride.
+4. This launch has a built-in configuration.
+
+5. Click **Create App** with all pride.
 
 Voila! your application is running like a charm!
 
+The source code used for this launch is
+
+.. code::
+
+  git clone
+
+The App Overview page show the application performance, and ability to bind services.
+
+Now that you have launched a pre-configured Java app, you'll be raring to launch your own.
+
+Deploying Your Java App
+========================
+
+Now you have a Java app, which you want to deploy in Megam. Sure, first lets test it locally.
 
 
-**Do not have a project to start with? Try out our test project for deployment.**
-
-
-
-**Getting Started with Deploying a sample JAVA Application**
------------------------------------------------------------
-
-
-
-Prepare the application:
-------------------------
-
-
-Barebone java app, which can be used to deploy in Megam.
-
-
-Running Locally:
+Running Locally
 ----------------
 
 
-**Basic Prerequisites:**
+Basic Prerequisites
+^^^^^^^^^^^^^^^^^^^
 
-**Installing GIT:**
+To get started with Java, you will need to prepare a few things:
 
-**Git**:
+mvn:
+    Maven is the most common build-tool in the Java community, and is what we will use for building our Java application.
 
-A tool that has become a part of every linux developer's life is an effective
-SCM
+.. code::
 
+     $sudo apt-get install maven
 
-**Maven**:
+An editor for Java:
+    IntelliJ and Eclipse are the most popular choices and work on all platforms, though there are others.
 
-Maven is essentially a project management and comprehension tool and as such provides a way to help with managing:
-
-
-**Installing Git:**
+Git:
+    This is a version-control system that we will use to download and manage our Scala.js projects.
 
 .. code::
 
     $sudo apt-get update
     $sudo apt-get install git
 
+A terminal:
+    on OSX you have Terminal.app already installed, in Linux you have Terminal, and on Windows you have PowerShell.
 
-**Installing Maven:**
+Your favorite web browser:
+    Chrome and Firefox are the most popular.
 
-.. code::
-
-     $sudo apt-get install maven
 
 Now, clone the sample github project and test it locally.
 
 .. code::
 
-      $git clone https://github.com/megamsys/java-getting-started.git
-      $cd java-getting-started
-      $mvn install
+      $ git clone https://github.com/megamsys/java-getting-started.git
+      $ cd java-getting-started
+      $ mvn install
 
 
-Check the app running on localhost:5000
+Verify and test your app running on localhost:5000
 
 
-
-**Deploying in Megam:**
+Deploying in Megam
 -----------------------
 
-Now we know the application is in a working state, let us deploy it in Megam.
+Now we know the application is in a working state, let us deploy it in Megam. Megam will launch the application with same steps as explained in ``Deploy Dialog box`` except that you have to click "BYOC in Marketplace"
 
-Follow the steps to get started.
+BYOC(Bring Your Own Code):
+   Megam supports plethora of SCMs, select one. Enter the ``URL of your source code``
 
-* Login Megam to enter dashboard
-* Click 'Create an App'
-* Choose Java Starter Pack
-* Deploy Dialog Box - Select *Github* and paste the URL below.
-* Click Create App
+Voila! your application is running like a charm!
 
-Now Megam will launch the application.
+The ``App Overview page`` show the application performance, and ability to bind services.
 
-App performance can be checked in Apps Overview page.
+Now that you have launched your app, you might want to launch a service (database) and bind it to the app. Read about :ref:`Binding a service <deployaservice>`
 
 
-
-
+.. |starter packs| image:: /images/starter_packs.png
+.. |javaweb starter| image:: /images/javawebstarter_launch.png
 .. |megam basiccombo javaapp| image:: /images/megam_basiccombo_java.png
