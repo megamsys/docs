@@ -30,7 +30,7 @@ Select the ``Java Duke icon``, which opens a panel that displays more informatio
 
 **Java Web Starter Pack**
 
-When an app is launched in Megam the following steps are perfomed automatically for you by an operation invoker.  The steps are hidden and abstracted from the user.
+When an app is launched in Megam the following steps are performed automatically for you by an operation invoker.  The steps are hidden and abstracted from the user.
 
 - Install Tomcat 8.0
 - Install SQllite
@@ -97,7 +97,7 @@ An editor for Java:
     IntelliJ and Eclipse are the most popular choices and work on all platforms, though there are others.
 
 Git:
-    This is a version-control system that we will use to download and manage our Scala.js projects.
+    This is a version-control system that we will use to download and manage our java projects.
 
 .. code::
 
