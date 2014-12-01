@@ -65,7 +65,7 @@ The source code used for this launch is
 
 .. code::
 
-  git clone
+  git clone https://github.com/megamsys/varai.git
 
 The App Overview page show the application performance, and ability to bind services.
 
@@ -115,9 +115,9 @@ Now, clone the sample github project and test it locally.
 
 .. code::
 
-      $ git clone https://github.com/megamsys/.git
-      $ cd
-      $ node
+      $ git clone https://github.com/megamsys/varai.git
+      $ cd varai
+      $ node varai.js
 
 
 Verify and test your app running on localhost:8124

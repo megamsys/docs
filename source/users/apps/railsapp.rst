@@ -72,7 +72,7 @@ The source code used for this launch is
 
 .. code::
 
-  git clone
+  git clone https://github.com/megamsys/nilavu.git
 
 
 The App Overview page show the application performance, and ability to bind services.
@@ -155,8 +155,8 @@ Now, clone the sample github project and test it locally.
 
 .. code::
 
-  $git clone
-  $cd 
+  $git clone https://github.com/megamsys/nilavu.git
+  $cd nilavu
   $rails server
 
 
