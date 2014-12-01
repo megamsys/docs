@@ -33,7 +33,7 @@ Megam uses a mix of "Declarative" and "Imperative style" to realize any business
 Standards
 ==========
 
-Our declarative specifiation will be compliant with :
+Our declarative specification will be compliant with :
 
 `TOSCA(Topology for orchestration of cloud applications) <http://docs.oasis-open.org/tosca/TOSCA-Simple-Profile-YAML/v1.0/TOSCA-Simple-Profile-YAML-v1.0.html>`_
     We found that TOSCA wasn't API friendly. Its use case was more fit for a Command Line(CLI) will be compliant to TOSCA.
