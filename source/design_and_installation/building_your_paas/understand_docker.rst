@@ -197,13 +197,14 @@ When your dockerized apps / dockerized services are running in the cloud, we nee
 
 The above picture shows  a Docker cluster in which several applcation(A1...An) and services(S1..Sn) are running. From a  container standpoint, it just another network end-point its trying to attach itself to. When we say attach itself we merely setup environment variables in the linked-to container and enable communication across the linked containers.
 
-Megam will use Geard to link containers.
+|megam docker portmapped|
+
 Read more about `container link(Docker) <https://docs.docker.com/userguide/dockerlinks/>`_ for that.
 
 
 
 
-
+.. |megam docker portmapped| image:: /images/megam_docker_portmapped.png
 .. |megam docker container linking| image:: /images/megam_docker_multitenancy_container_linking.png
 .. |megam docker cluster| image:: /images/megam_docker_cluster.png
 .. |megam docker lifecycle| image:: /images/megam_docker_lifecycle.png
