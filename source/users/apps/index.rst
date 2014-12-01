@@ -1,8 +1,8 @@
 .. _appsguide:
 
-=============
-Release Notes
-=============
+=====
+Apps
+=====
 
 .. toctree::
    :maxdepth: 2

@@ -1,5 +1,0 @@
-.. _loadbalancersservice:
-
-==============
-Load balancer
-==============
