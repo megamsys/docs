@@ -18,22 +18,6 @@ Cookbooks has support for ubuntu trusty
 
 debian and centos are a work in progress.
 
-Each Chef run, there is a run_list that Megam performs.
-
-+------------------------+--------------------------------------------------------+
-|    Recipes             |   Description                                          |
-|                        |                                                        |
-+========================+========================================================+
-| megam_preinstall       |  include recipe: megam_preinstall                      |
-|                        |  include recipe: megam_preinstall::account             |
-|                        |                                                        |
-|                        |      Preseed for the vm assembly                       |
-|                        |      Installs the packages for ubuntu trusty           |
-|                        |      build_essentials                                  |
-|                        |      creates a user named  “megam”/ group named “megam”|
-+------------------------+--------------------------------------------------------+
-
-
 
 
 
