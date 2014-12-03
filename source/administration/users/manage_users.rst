@@ -1,5 +1,4 @@
 .. _manage_users:
-.. _manage_users_users:
 
 ==========================
 Managing Users
@@ -19,4 +18,3 @@ There are different user types in the Megam system:
 -  **Regular   User** accounts may access most of the functionality offered by Megam to manage resources.
 
 .. note:: The complete Megam approach to user accounts and groups is explained in more detain in the :ref:`Understanding Megam <understand>` guide.
-

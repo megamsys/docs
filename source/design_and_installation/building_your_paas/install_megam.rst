@@ -116,7 +116,7 @@ Download and run `this <https://raw.githubusercontent.com/megamsys/cloudinabox/m
 Step 3.
 ==================
 
-
+If you find issues then send an email by tar with the logs in /var/log/megam to support@megam.co.in
 
 
 Step 4. Next steps

@@ -7,5 +7,4 @@ Administration Guide
 
    Chef <chef/index>
    Monitoring <monitoring/index>
-   DNS <dns/index>
    Users <users/index>

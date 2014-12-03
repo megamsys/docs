@@ -1,4 +1,4 @@
-f you can't find a starter in the IBM® megam\u2122 catalog that provides the runtime that you want, you can bring an existing buildpack to megam. You can specify a custom, Cloud Foundry-compatible buildpack when you deploy your application by using the cf push command.
+If you can't find a starter in the IBM® megam\u2122 catalog that provides the runtime that you want, you can bring an existing buildpack to megam. You can specify a custom, Cloud Foundry-compatible buildpack when you deploy your application by using the cf push command.
 External buildpacks are provided by the Cloud Foundry community for you to use as your own buildpacks.
 Note: External buildpacks are not supported by IBM; therefore, you might need to contact the Cloud Foundry community for support.
 

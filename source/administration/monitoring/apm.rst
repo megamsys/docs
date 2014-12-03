@@ -13,16 +13,9 @@ The Push Model
 
 
 
-Other Monitorization Systems
-============================
-
-Megam can be easily integrated with other monitorization system. Please read the :ref:`op5 Monitoring <op5>` for more information.
-
-
 The Monitor Metrics
 ===================
 
 The information manage by the monitoring system includes the typical performance and configuration parameters for the host and VMs, e.g. CPU or network consumption, Hostname or CPU model.
 
-These metrics are gathered by specialized programs, called probes, that can be easily added to the system.  
-
+These metrics are gathered by specialized programs, called probes, that can be easily added to the system.
