@@ -6,7 +6,9 @@ Pick a Cloud
 #####################
 
 
-Megam can be used to manage multiple clouds on different environments. It is entirely possible to have multiple environments with the same cloud provider (providing they are of course separate environments on the cloud too) or across all the different types of supported cloud providers.
+Megam can be used to manage multiple clouds on different environments (eg: dev, test, stagind, prod). It is entirely possible to have multiple environments with the same cloud provider (providing they are of course separate environments on the cloud too).
+
+  .. image:: /images/cloudsettings_bar.png
 
 .. hint:: The supported clouds are:
 

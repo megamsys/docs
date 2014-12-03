@@ -1,36 +1,47 @@
 .. _hp_cloud:
 
-================================
-HP Cloud
-================================
+====
+HP
+====
 
-This page describes how to define a new hp target cloud. Thi
-
-
-Common Attributes
-=================
-
-These are the common attributes for this cloud are:
-
-+--------------------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------+
-|     Attribute      |    Value     |                                                                Description                                                                 |               Mandatory                |
-+====================+==============+============================================================================================================================================+========================================+
-| **NAME**           | String       | Name of the cloud                                                                                                                          | YES                                    |
-+--------------------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------+
+This page describes how to define a new hp target cloud.
 
 Steps
 ============================
 
-If you have your own account with profitbricks, you can use the same with megam. 
 
-- Have the configuration handy
+If you have your own account with hp, you can use the same with megam.
 
-- The "Image can't be entered for now". But use our custom snapshot named "raring_stencil" with a canned password for the snapshot "team4megam".  
 
-- We can fix it up to remove the canned password limitation.   
-  
-.. image:: /images/pb.png 
-          
-- Click Save
-   
-- You can see your saved settings in under ``Manage Settings`` >  ``Clouds`` 
+Choose Settings
+    The following appears.
+
+    .. image:: /images/cloudsettings_bar.png
+
+    Choose ``hp`` icon.
+
+
+
+Enter the hp credentials.
+    The following popup appears asking to enter your hp Credentials.  If you don't have one you can create the same in hp website.
+
+    .. image:: /images/cloudsettings_hp.png
+
+
+
+
+Select Parameters
+    Your hp paramters should be listed.
+
+    Choose the group, flavor, and other details you want to use and save the setting.
+
+    For hp we have pre-built public partner images named ``megam_trusty`` which can be used. Hence you will not find an exhaustive list of your images.
+
+    Save the configuration.
+
+
+
+List Settings
+    The list of your saved settings are shown here.
+
+    .. image:: /images/cloudsettings_list.png

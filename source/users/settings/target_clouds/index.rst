@@ -6,10 +6,11 @@ Target Clouds
    :maxdepth: 2
 
    Pick a Cloud <pickacloud>
-   Gogrid <gogrid>
-   Profit Bricks <pb>
+   OpenNebula <opneb>
    HP <hp>
    AWS <aws>
+   Gogrid <gogrid>
+   Profit Bricks <pb>
    Google <gce>
    Podnix <podnix>
-   OpenNebula <opneb>
+   Preparing an Image <prepare_image>
