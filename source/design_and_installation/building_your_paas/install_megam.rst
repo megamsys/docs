@@ -21,6 +21,8 @@ Installing on Ubuntu 14.04 Trusty
 
     sudo apt-get update
 
+    sudo apt-get install megamcommon
+
     sudo apt-get install megamnilavu megamsnowflake megamgateway megamd megametcd megamanalytics
 
 
