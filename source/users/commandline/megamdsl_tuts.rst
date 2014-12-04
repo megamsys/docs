@@ -18,28 +18,18 @@ The definition below launches a single application.
 
   tosca_definitions_version: tosca_simple_yaml_1_0
 
-  description: Template for deploying a single  application on one vm
-
-  inputs:
-    # Admin user name and password to use with the Webserver
-    wp_admin_username:
-       type: string
-    wp_admin_password:
-       type string
+  description: Template for deploying a ORION IDE on one vm
 
   node_templates:
 
-    apache:
-      type: tosca.nodes.WebServer.Apache
-      properties:
-        # omitted here for sake of brevity
-      requirements:
-        - host: web_server
-
-    web_server:
-      type: tosca.nodes.Compute
-      properties:
-        # omitted here for sake of brevity
+  orion:
+    type: tosca.nodes.WebServer.java
+    properties:
+      # omitted here for sake of brevity
+    requirements:
+      - host: aws1146028290067267584
+      - domain: megam.co 
+      - source: https://s3-ap-southeast-1.amazonaws.com/megampub/0.1/war/orion.war
 
 
 Single Application + Database
@@ -132,29 +122,32 @@ Grouped application
 
   tosca_definitions_version: tosca_simple_yaml_1_0
 
-  description: Template for a scaling web server.
-
-  inputs:
-  # omitted here for sake of brevity
+  description: Template for deploying a GHOST and MEGAM ARYABHATA applications on one vm
 
   node_templates:
-    apache:
-      type: tosca.types.nodes.ApacheWebserver
-      properties:
-        http_port: 8080
-        https_port: 8443
-      requirements:
-        - host: server
 
-    server:
-      type: tosca.nodes.Compute
-      properties:
-        # omitted here for sake of brevity
+  ghost:
+    type: tosca.nodes.WebServer.nodejs
+    properties:
+      # omitted here for sake of brevity
+    requirements:
+      - host: aws1146028290067267584
+      - domain: megam.co 
+      - source: https://github.com/thomasalrin/ghost.git
+
+  aryabhata:
+    type: tosca.nodes.WebServer.rails
+    properties:
+      # omitted here for sake of brevity
+    requirements:
+      - host: aws1146028290067267584
+      - domain: megam.co 
+      - source: https://github.com/thomasalrin/aryabhata.git
 
   group:
-    webserver_group:
-      members: [ apache, server ]
-      policies:
-        - my_scaling_policy:
-           # Specific policy definitions are considered domain specific and
-           # are not included here
+    app_group:
+    members: [ ghost, aryabhata ]
+    policies:
+      - my_placement_policy:
+         # Specific policy definitions are considered domain specific and
+         # are not included here 
