@@ -7,4 +7,4 @@ Source Control Manager
 
    Github <github>
    Assembla <assembla>
-   SCM-Manager <scm-manager>
+   Gogs <gogs>

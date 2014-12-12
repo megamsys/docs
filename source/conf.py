@@ -256,7 +256,7 @@ latex_documents = [
 
 # The name of an image file (relative to this directory) to place at the top of
 # the title page.
-latex_logo = "_static/logo-megam130x34w.png"
+latex_logo = "_static/logo-megam130x34.png"
 
 # For "manual" documents, if this is true, then toplevel headings are parts,
 # not chapters.
@@ -324,7 +324,7 @@ html_theme_options = {
     # an arbitrary url.
     'navbar_links': [
         ("Gomegam","http://gomegam.com",1),
-        ("Dev","http://www.megam.co",1),
+        ("Dev","https://www.megam.co",1),
     ],
 
     # Render the next and previous page links in navbar. (Default: true)
@@ -348,7 +348,7 @@ html_theme_options = {
 
     # HTML navbar class (Default: "navbar") to attach to <div> element.
     # For black navbar, do "navbar navbar-inverse"
-    'navbar_class': "navbar navbar-inverse",
+    'navbar_class': "navbar",
 
     # Fix navigation bar to top of page?
     # Values: "true" (default) or "false"
@@ -364,7 +364,7 @@ html_theme_options = {
     # such as "amelia" or "cosmo".
     #
     # Note that this is served off CDN, so won't be available offline.
-    'bootswatch_theme': "",
+    'bootswatch_theme': "lumen",
 
     # Choose Bootstrap version.
     # Values: "3" (default) or "2" (in quotes)

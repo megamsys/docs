@@ -13,4 +13,5 @@ Users Guide
    Services <services/index>
    Addons <addons/index>
    CLI <commandline/index>
+   Source Control <scms/index>
    References <references/index>

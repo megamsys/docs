@@ -1,51 +1,99 @@
-.. _context_overview:
+.. _scmoverview:
 
 ===================================
-Source Control Manager Overview
+ Overview
 ===================================
 
-Megam provides different methods to pass source control (SCM) information to a newly created Virtual Machine. This information can be reside in a public/private SCM 
+Megam integrates with different  source control (SCM) which can be used as source code repository to deploy apps/services.
+
+``Megam`` can deploy using public/private Git repository of apps/services in the cloud.  We support integration to  the following.
 
 
-###########################
-Source Control Manager
-###########################
+Gogs  `http://gogs.io <http://gogs.io>`_.
+=================================
 
-"Megam" uses any public/private Git repo to deploy the apps/services in the cloud. 
+Gogs is a self hosted Git service written in Go.  This is for customers who wish to run a Git repository on premise.
 
+Read about installing gogs  :ref:`here <installgogs>`
 
-Some of the popular ones are described here. There are two choices for providing a Git repo. You can ``manually`` type the repo url
-or ``authenticate to the scm`` and we use the api to list your repos. 
+Configuring
+----------------
 
- .. image:: /images/scm.png
+This step needs to be performed by administrators, upon installating **gogs**. The following appears when the very first time  gogs is invoked using the URL ``http:\\<ip>:4000``
+
+|megam gogs1|
+
+Accept the defaults. You can configure a SMTP server  as shown below. If you need an SMTP server, then we suggest you to look at  `http://mandrillapp.com <https://mandrillapp.com>`_.
+
+Once you signup to ``mandrillapp`` note down the following.
+
+|megam mandrill|
+
+Complete the SMTP credentials and **Install Gogs**.
+
+|megam gogs2|
+
+Megam needs to be configured with the client_id and secret_key in gogs. Create a client_id and secret_key in gogs.
+
+.. code::
+
+    $ nano /var/lib/megam/nilavu.yml
+
+    #add the client_id and secret_key
+
+    auth:
+        github_client_id: abcde214
+        github_secret_key: abcdefff
+
+Restart nilavu. Read about :ref:`Restarting  Megam <restart_megam>`
 
 Github
-============================
+======
+
 
 If you don't have an account yet, please feel free to get one. `https://github.com <https://github.com>`_.
 
-- When you click on the Github octocat icon, we use OAuth to authenticate you and list the repos.  
-     
-  
+Megam needs to be configured with the client_id and secret_key in gogs. Create a client_id and secret_key in gogs.
+
+|megam github1|
+
+
+When the organization has a key registered, it will appear as follows.
+
+
+|megam github2|
+
+
+.. code::
+
+    $ nano /var/lib/megam/nilavu.yml
+
+    #add the client_id and secret_key
+
+    auth:
+        github_client_id: abcde214
+        github_secret_key: abcdefff
+
+
 
 Assembla
-============================
+========
 
 If you don't have an account yet, please feel free to get one. `https://assembla.com <https://assembla.com>`_.
 
-- When you click on the Assembla icon, we use OAuth to authenticate you with assembla and list the repos.  
-   
+Read about `How to use Assembla in Megam <http://gomegam.com/blog/2014/03/auto-code-deploy-from-assembla-to-any-cloud/>`_.
 
+.. code::
+    $ nano /var/lib/megam/nilavu.yml
 
-SCM-Manager 
-============================
+    #add the client_id and secret_key
 
-This option is for customers who wish to run a SCM and use it in Megam.  Launch your own SCM-Manager instance
- 
+    auth:
+        assembla_client_id: abcde214
+        assembla_secret_key: abcdefff
 
-
--  :ref:`Github   <github>`: If you want to configure Github read this guide.
--  :ref:`Assembla <assembla>`: If you only want to configure Assembla read this guide.
--  :ref:`SCM-Manager <scm-manager>`: If you only want to configure SCM-Manager read this guide.
--  :ref:`Bitbucket  <bitbucket>`: If you only want to configure Bitbucket read this guide.
--  :ref:`CloudForge  <cloudforge>`: If you only want to configure CloudForge read this guide.
+.. |megam github1| image:: /images/github_key.png
+.. |megam github2| image:: /images/github_key1.png
+.. |megam gogs1| image:: /images/gogs_install.png
+.. |megam gogs2| image:: /images/gogs_install1.png
+.. |megam mandrill| image:: /images/mandrillapp.png
