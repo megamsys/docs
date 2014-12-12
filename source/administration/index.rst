@@ -7,4 +7,5 @@ Administration Guide
 
    Chef <chef/index>
    Monitoring <monitoring/index>
+   Source Control <scm/index>
    Users <users/index>
