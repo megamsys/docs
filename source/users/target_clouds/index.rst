@@ -5,7 +5,7 @@ Target Clouds
 .. toctree::
    :maxdepth: 2
 
-   Target Cloud <targetcloud>
+   Pick a Cloud <pickacloud>
    Gogrid <gogrid>
    Profit Bricks <pb>
    HP <hp>

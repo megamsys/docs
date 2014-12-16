@@ -7,12 +7,11 @@ Users Guide
 .. toctree::
    :maxdepth: 2
 
-
-   Security <security/index>
-   Target Clouds <target_clouds/index>
-   Source Control <scms/index>
+   Browser base UI <ui/index>
+   Settings <settings/index>
    Apps <apps/index>
-   Services <services/index>  
-   Marketplace <marketplaces/index>  
+   Services <services/index>
+   Addons <addons/index>
+   CLI <commandline/index>
+   Source Control <scms/index>
    References <references/index>
-

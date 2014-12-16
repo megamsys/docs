@@ -5,18 +5,20 @@ Sphinx based documentation that gets built/hosted in [www.gomegam.com/docs](http
 
 ### Requirements
 
-> 
+>
 [Sphinx ](http://sphinx-doc.org/)
-[Ubuntu 12.04 +] (http://ubuntu.com)
+[Ubuntu 14.04 +] (http://ubuntu.com)
 
 
 ### Setting up [Spinx](http://sphinx-doc.org)
 
 ```
-sudo apt-get install python-sphinx
+sudo apt-get install python-sphinx python-pip
+
+sudo pip install sphinx_bootstrap_theme
 
 ```
- 
+
 ### Contribte to docs, `Fork` this repo, send us a `Pull request`
 
 
@@ -29,33 +31,30 @@ sudo apt-get install python-sphinx
 
 ```
 
-make clean         
+make clean
 
 
 make html
 
-
+Open a browser and launch build/index.html to test it.
 ```
 
-* Before you send the pull request, make sure you run `make clean` 
+* Before you send the pull request, make sure you run `make clean`
 
 
 We are glad to help if you have questions, or request for new features..
 
 [twitter](http://twitter.com/indykish) [email](<rajthilak@megam.co.in>)
 
-#### TO - DO
 
-* Incrementally keep beefing up docs.
 
-	
 # License
 
 |                      |                                          |
 |:---------------------|:-----------------------------------------|
 | **Author:**          | Rajthilak (<rajthilak@megam.co.in>)
-|	               | Varadarajan Narayanan(rad@megam.co.in)
-|	       	       | KishorekumarNeelamegam (<nkishore@megam.co.in>)
+|	                     | Varadarajan Narayanan(rad@megam.co.in)
+|	       	             | KishorekumarNeelamegam (<nkishore@megam.co.in>)
 |                      | Thomas Alrin(<alrin@megam.co.in>)
 | **Copyright:**       | Copyright (c) 2013-2014 Megam Systems.
 | **License:**         | Apache License, Version 2.0
@@ -71,4 +70,3 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
- 

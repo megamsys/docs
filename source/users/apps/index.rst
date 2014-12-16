@@ -1,16 +1,15 @@
 .. _appsguide:
 
-=============
-Release Notes
-=============
+=====
+Apps
+=====
 
 .. toctree::
    :maxdepth: 2
 
-   Apps <apps>
-   Scaling <scaling>
-   Deploying An App <deployapps>
    Java <javaapp>
    Ruby on Rails <railsapp>
+   Play <playapp>
    Node.js <nodejsapp>
    Akka <akkaapp>
+   Deploy in Docker <deploydocker>
