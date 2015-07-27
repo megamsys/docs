@@ -52,10 +52,10 @@ We are glad to help if you have questions, or request for new features..
 
 |                      |                                          |
 |:---------------------|:-----------------------------------------|
-| **Author:**          | Rajthilak (<rajthilak@megam.co.in>)
+| **Author:**          | Rajthilak (<rajthilak@megam.io>)
 |	                     | Varadarajan Narayanan(rad@megam.co.in)
-|	       	             | KishorekumarNeelamegam (<nkishore@megam.co.in>)
-|                      | Thomas Alrin(<alrin@megam.co.in>)
+|	       	             | KishorekumarNeelamegam (<nkishore@megam.io>)
+|                      | Thomas Alrin(<thomasalrin@megam.io>)
 | **Copyright:**       | Copyright (c) 2013-2014 Megam Systems.
 | **License:**         | Apache License, Version 2.0
 
