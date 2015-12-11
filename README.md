@@ -1,9 +1,9 @@
-Documentation for Megam
-==============================
-
-#This project is INACTIVE 
+Documentation for Megam cloud platform.
+=========================================
 
 # Our new docs homes [docs.megam.io](http://docs.megam.io)
+
+We store the backup of the docs.megam.io here.
 
 
 # License
