@@ -1,62 +1,19 @@
-Documentation for Megam
-==============================
+Documentation for Megam cloud platform.
+=========================================
 
-Sphinx based documentation that gets built/hosted in [www.gomegam.com/docs](http://www.gomegam.com/docs).
+# Our new docs homes [docs.megam.io](http://docs.megam.io)
 
-### Requirements
-
->
-[Sphinx ](http://sphinx-doc.org/)
-[Ubuntu 14.04 +] (http://ubuntu.com)
-
-
-### Setting up [Spinx](http://sphinx-doc.org)
-
-```
-sudo apt-get install python-sphinx python-pip
-
-sudo pip install sphinx_bootstrap_theme
-
-```
-
-### Contribte to docs, `Fork` this repo, send us a `Pull request`
-
-
-### [Sphinx markup reference](http://sphinx-doc.org/latest/contents.html)
-
-
-### Building docs
-
-* It so simple.  
-
-```
-
-make clean
-
-
-make html
-
-Open a browser and launch build/index.html to test it.
-```
-
-* Before you send the pull request, make sure you run `make clean`
-
-
-We are glad to help if you have questions, or request for new features..
-
-[twitter](http://twitter.com/indykish) [email](<rajthilak@megam.co.in>)
-
+We store the backup of the docs.megam.io here.
 
 
 # License
 
 |                      |                                          |
 |:---------------------|:-----------------------------------------|
-| **Author:**          | Rajthilak (<rajthilak@megam.co.in>)
-|	                     | Varadarajan Narayanan(rad@megam.co.in)
-|	       	             | KishorekumarNeelamegam (<nkishore@megam.co.in>)
-|                      | Thomas Alrin(<alrin@megam.co.in>)
-| **Copyright:**       | Copyright (c) 2013-2014 Megam Systems.
+| **Author:**          | Rajthilak (<rajthilak@megam.io>)
+|	       	           | KishorekumarNeelamegam (<nkishore@megam.io>)
+|                      | Thomas Alrin(<thomasalrin@megam.io>)
+| **Copyright:**       | Copyright (c) 2013-2015 Megam Systems.
 | **License:**         | Apache License, Version 2.0
 
 Licensed under the Apache License, Version 2.0 (the "License");
