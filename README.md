@@ -1,9 +1,12 @@
 Documentation for Megam cloud platform.
 =========================================
 
-# Our new docs homes [docs.megam.io](http://docs.megam.io)
+# The following docs are sunset. 
 
-We store the backup of the docs.megam.io here.
+### the doc in this repository 
+### [docs.megam.io](http://docs.megam.io)
+
+Refer [docs-det.io.netlify.com](docs-det.io.netlify.com)
 
 
 # License
