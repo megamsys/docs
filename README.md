@@ -1,9 +1,6 @@
-Documentation for Megam cloud platform.
-=========================================
-
 # The following docs are sunset. 
 
-### the doc in this repository 
+### [megamsys/docs](https://github.com/megamsys/docs) repository 
 ### [docs.megam.io](http://docs.megam.io)
 
 Refer [docs-det.io.netlify.com](docs-det.io.netlify.com)
